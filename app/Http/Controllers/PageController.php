@@ -8,6 +8,8 @@ use App\Models\Result;
 use App\Models\Course;
 use App\Models\Scholarship;
 use App\Models\Files;
+use App\Models\Subject;
+
 use File;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,7 +25,8 @@ class PageController extends Controller
         $exams = Exam::where('user_id',Auth::id())->get();
         
         $results = Result::all();
-        return view('result',['exams' => $exams,'results'=>$results]);
+        $subjects = Subject::all();
+        return view('result',['exams' => $exams,'results'=>$results,'subjects' => $subjects]);
     }
     public function result(Request $request){
         $exam = Exam::create([
@@ -34,7 +37,7 @@ class PageController extends Controller
             'user_id' => Auth::id()
         ]);
 
-        return response()->json(['success'=>'You have successfully upload file.']);
+        return redirect()->route('result');
 
     }
 
@@ -47,7 +50,20 @@ class PageController extends Controller
             
         ]);
 
-        return response()->json(['success'=>'You have successfully upload file.']);
+        return redirect()->route('result');
+
+    }
+
+    public function editresult(Request $request,$id){
+        $result = Result::find($id);
+        $result->update([
+            'subject' => $request->subject,
+            'grade' => $request->grade,
+            'exam_id' =>$request->exam_id,
+        ]);
+      
+
+        return redirect()->route('result');
 
     }
 

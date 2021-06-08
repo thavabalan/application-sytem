@@ -7,8 +7,10 @@ use App\Models\Scholarship;
 use App\Models\Course;
 use App\Models\Application;
 use App\Models\User;
+use App\Models\ApplicationFile;
+use App\Models\Subject;
 use Illuminate\Support\Facades\Auth;
-
+use File;
 class ApplicationController extends Controller
 {
     public function index(){
@@ -58,10 +60,10 @@ class ApplicationController extends Controller
             'user_id' => Auth::id()
         ]);
         
-        return response()->json(['success'=>$application->id,'courseid'=>$courseid]);
+        return redirect()->route('applications');
     }
 
-    public function approveapplication($id){
+    public function approveapplication(Request $request,$id){
         $random_string = md5(microtime());
     
         $fileName = $random_string.'.'.$request->offerletter->extension(); 
@@ -139,4 +141,38 @@ class ApplicationController extends Controller
         $male_count =  User::where('gender','Male')->count();
         return view('admin.index',['application_count' => $application_count,'approved_count' => $approved_count,'pending_count' => $pending_count,'female_count' => $female_count,'male_count'=>$male_count ]);
     }
+
+    public function  offerletter(){
+
+        $application = Application::where('status','Approved')->get();
+
+        return view('student.offerletter',['applications'=>$application]);
+    }
+
+    public function addsubject(Request $request){
+
+        $subject = Subject::create([
+            'title' => $request->title
+        ]);
+
+        return redirect()->route('addsubjectview');
+    }
+
+    public function deletesubject($id){
+
+        $subject = Subject::find($id);
+
+        $subject->delete();
+
+       
+
+        return redirect()->route('addsubjectview');
+    }
+
+    public function addsubjectview(){
+
+        $subjects = Subject::all();
+        return view('admin.subject',['subjects' => $subjects]);
+    }
+   
 }

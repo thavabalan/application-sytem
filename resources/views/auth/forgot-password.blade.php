@@ -10,7 +10,7 @@
             <!--begin::Header-->
             <div class="d-flex flex-column text-center p-10 pt-lg-20">
                 <!--begin::Logo-->
-                <a href="index.html" class="py-9">
+                <a href="/" class="py-9">
                     <img alt="Logo" src="assets/media/miu logo.png" class="h-300px" />
                 </a>
                 <!--end::Logo-->

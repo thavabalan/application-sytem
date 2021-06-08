@@ -28,6 +28,7 @@ Route::get('/result',  [PageController::class, 'resultadd'])->middleware('applic
 Route::post('/result', [PageController::class, 'result'])->middleware('applicant')->name('save');
 Route::post('/scholarhip', [PageController::class, 'addscholarship'])->middleware('admin')->name('addscholarship');
 Route::post('/resultadd', [PageController::class, 'addresult'])->middleware('applicant')->name('addresult');
+Route::post('/editresult/{id}', [PageController::class, 'editresult'])->middleware('applicant')->name('editresult');
 
 Route::post('/course', [PageController::class, 'addcourse'])->middleware('admin')->name('addcourse');
 Route::post('/course/edit/{id}', [PageController::class, 'editcourse'])->middleware('admin')->name('editcourse');
@@ -49,12 +50,17 @@ Route::get('/admin/approved',[ApplicationController::class,'approvedapplications
 Route::get('/admin/scholarship',[ApplicationController::class,'scholarshipapplications'])->middleware('admin')->name('scholarshipapplications');
 Route::get('/admin/course',[ApplicationController::class,'courseapplications'])->middleware('admin')->name('courseapplications');
 Route::get('/admin',[ApplicationController::class,'admindashboard'])->middleware('admin')->name('admin');
+Route::get('/admin/subject',[ApplicationController::class,'addsubjectview'])->middleware('admin')->name('addsubjectview');
+Route::post('/admin/subject',[ApplicationController::class,'addsubject'])->middleware('admin')->name('addsubject');
+Route::get('/admin/subject/delete/{id}', [ApplicationController::class, 'deletesubject'])->middleware('admin')->name('deletesubject');
 
 Route::get('/admin/scholarship/application/{id}',[ApplicationController::class,'scholarshipapplicationsview'])->middleware('admin')->name('scholarship.application');
 Route::get('/admin/course/application/{id}',[ApplicationController::class,'courseapplicationsview'])->middleware('admin')->name('course.application');
 
 Route::get('/studentapplications',[ApplicationController::class,'applications'])->middleware('applicant')->name('applications');
 Route::get('/application',[ApplicationController::class,'index'])->middleware('applicant')->name('application.index');
+Route::get('/offerletter',[ApplicationController::class,'offerletter'])->middleware('applicant')->name('application.offerletter');
+
 Route::get('/application/scholarship',[ApplicationController::class,'scholarship'])->middleware('applicant')->name('application.scholarship');
 Route::get('/application/scholarship/{id}',[ApplicationController::class,'scholarshipsingle'])->middleware('applicant')->name('scholarship.single');
 Route::get('/application/scholarship/{scholarid}/{courseid}',[ApplicationController::class,'apply'])->middleware('applicant')->name('scholarship.apply');

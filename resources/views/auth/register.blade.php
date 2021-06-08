@@ -8,7 +8,7 @@
             <!--begin::Header-->
             <div class="d-flex flex-column flex-center p-10 pt-lg-20">
                 <!--begin::Logo-->
-                <a href="index.html" class="mb-10 mb-lg-20">
+                <a href="/" class="mb-10 mb-lg-20">
                     <img alt="Logo" src="assets/media/logo1.png" class="h-45px" />
                 </a>
                 <x-auth-validation-errors class="mb-4" :errors="$errors" />
@@ -189,7 +189,7 @@
                                         <div class="col-lg-4">
                                             <!--begin::Option-->
                                             <label class="form-label fw-bolder text-dark fs-6">Mobile Number</label>
-                                            <input class="form-control form-control-lg form-control-solid" type="email" placeholder="" name="mobilenumber" autocomplete="off" />
+                                            <input class="form-control form-control-lg form-control-solid" type="tel" placeholder="" name="mobilenumber" autocomplete="off"  id="phone"/>
                                
                                             <!--end::Option-->
                                         </div>
@@ -210,15 +210,19 @@
                                         <div class="col-lg-3">
                                             <!--begin::Option-->
                                             <label class="form-label fw-bolder text-dark fs-6">Nationality</label>
-                                            <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="nationality" autocomplete="off" />
-                               
+                                            <select name="nationality" class="form-select form-select-lg form-select-solid" data-control="select2" data-placeholder="Select..." data-allow-clear="true" >
+                                              @foreach($countries as $item)
+                                                <option value="{{$item['name']}}">{{$item['name']}}</option>
+                                                @endforeach
+                                            </select>
+                                            
                                             <!--end::Option-->
                                         </div>
                                         <div class="col-lg-3">
                                             <!--begin::Option-->
                                             <label class="form-label fw-bolder text-dark fs-6">State</label>
-
-                                    <select name="state" class="form-select form-select-lg form-select-solid" data-control="select2" data-placeholder="Select..." data-allow-clear="true" >
+                                            
+                                            <input class="form-control form-control-solid" type="text"  name="state"/>
                                         <option></option>
                                         <option value="Abia State">Abia State</option>
                                         <option value="Adamawa State">Adamawa State</option>
@@ -1180,6 +1184,8 @@
                                                 <option value="JAMB DE">JAMB DE</option>
                                                 <option value="Local Transfer">Local Transfer</option>
                                                 <option value="Foreign Transfer">Foreign Transfer</option>
+                                                <option value="Foreign Fresh Admission">Foreign Fresh Admission</option>
+
                                                 <option value="Conditional Admission">Conditional Admission</option>
                                             </select>
                                             <!--end::Option-->
@@ -1191,6 +1197,8 @@
                                                 <option value="">Select Application Type</option>                                            
                                                 <option value="1">Yes</option>
                                                 <option value="0">No</option>
+                                                <option value="0">Maybe required</option>
+
                                                 
                                             </select>
                                             <!--end::Option-->
@@ -1480,6 +1488,13 @@
 </div>
 @endsection
 @section('script')
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
 <script>
     $("#kt_daterangepicker_3").daterangepicker({
         singleDatePicker: true,

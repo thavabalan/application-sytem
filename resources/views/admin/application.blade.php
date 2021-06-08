@@ -11,19 +11,21 @@
             <table id="kt_datatable_example_1" class="table table-row-bordered gy-5">
                 <thead>
                     <tr class="fw-bold fs-6 text-muted">
-                        <th>Title</th>
-                        <th>Scholarship Title</th>
-                        <th>Degree in view</th>
+                        <th>Application ID</th>
+                        <th>Applicant</th>
+                        <th>Scholarship Category</th>
+                        <th>Course Preference</th>
                         <th>Status</th>
-                        <th>View</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($applications as $item)
                     <tr>
-                        <td>{{$item->course->title}}</td>
+                        <td>{{$item->id}}</td>
+                        <td>{{$item->user->firstname}}</td>
                         <td>{{$item->scholarship->title}}</td>
-                        <td>{{$item->course->degree_in_view}}</td>
+                        <td>{{$item->course->title}}</td>
                         <td>
                             @if($item->status === 'Submitted')
                             <span class="badge badge-light-primary fs-8 fw-bolder">Submitted</span>

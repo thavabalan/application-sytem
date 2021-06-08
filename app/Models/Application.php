@@ -13,7 +13,8 @@ class Application extends Model
         'user_id',
         'scholarship_id',
         'course_id',
-        'status'
+        'status',
+        'offer_letter'
     ];
 
     public function user()
