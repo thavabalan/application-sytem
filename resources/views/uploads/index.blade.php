@@ -45,6 +45,210 @@
                 </div>
         </div>
     </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">                O/L Result
+                </h3>
+
+            </div>
+            <div class="card-body">
+                <form id="kt_modal_new_card_form" class="form" action="{{route('postupload')}}" method="POST" enctype="multipart/form-data">
+                    
+                    @csrf
+                    <div class="d-flex flex-column mb-7 fv-row">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                            <span class="required">File</span>
+                        </label>
+                        <!--end::Label-->
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="O/L Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="O/L Result" />
+
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                    </div>
+                    <div class="text-center pt-15">
+                        <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
+                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-progress">Please wait...
+                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">                A/L Result
+                </h3>
+
+            </div>
+            <div class="card-body">
+                <form id="kt_modal_new_card_form" class="form" action="{{route('postupload')}}" method="POST" enctype="multipart/form-data">
+                    
+                    @csrf
+                    <div class="d-flex flex-column mb-7 fv-row">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                            <span class="required">File</span>
+                        </label>
+                        <!--end::Label-->
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="A/L Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="A/L Result" />
+
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                    </div>
+                    <div class="text-center pt-15">
+                        <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
+                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-progress">Please wait...
+                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">                UTME Result
+                </h3>
+
+            </div>
+            <div class="card-body">
+                <form id="kt_modal_new_card_form" class="form" action="{{route('postupload')}}" method="POST" enctype="multipart/form-data">
+                    
+                    @csrf
+                    <div class="d-flex flex-column mb-7 fv-row">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                            <span class="required">File</span>
+                        </label>
+                        <!--end::Label-->
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="UTME Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="UTME Result" />
+
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                    </div>
+                    <div class="text-center pt-15">
+                        <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
+                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-progress">Please wait...
+                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">                University Transcript Result
+                </h3>
+
+            </div>
+            <div class="card-body">
+                <form id="kt_modal_new_card_form" class="form" action="{{route('postupload')}}" method="POST" enctype="multipart/form-data">
+                    
+                    @csrf
+                    <div class="d-flex flex-column mb-7 fv-row">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                            <span class="required">File</span>
+                        </label>
+                        <!--end::Label-->
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value=" University Transcript Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value=" University Transcript Result" />
+
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                    </div>
+                    <div class="text-center pt-15">
+                        <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
+                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-progress">Please wait...
+                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">                Guarantor Recommendation Result
+                </h3>
+
+            </div>
+            <div class="card-body">
+                <form id="kt_modal_new_card_form" class="form" action="{{route('postupload')}}" method="POST" enctype="multipart/form-data">
+                    
+                    @csrf
+                    <div class="d-flex flex-column mb-7 fv-row">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                            <span class="required">File</span>
+                        </label>
+                        <!--end::Label-->
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="  Guarantor Recommendation Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="  Guarantor Recommendation Result" />
+
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                    </div>
+                    <div class="text-center pt-15">
+                        <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
+                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-progress">Please wait...
+                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">                Internation Passport(Foreign)
+                </h3>
+
+            </div>
+            <div class="card-body">
+                <form id="kt_modal_new_card_form" class="form" action="{{route('postupload')}}" method="POST" enctype="multipart/form-data">
+                    
+                    @csrf
+                    <div class="d-flex flex-column mb-7 fv-row">
+                        <!--begin::Label-->
+                        <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                            <span class="required">File</span>
+                        </label>
+                        <!--end::Label-->
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="   Internation Passport " />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="   Internation Passport" />
+
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                    </div>
+                    <div class="text-center pt-15">
+                        <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
+                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-progress">Please wait...
+                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
     </div>
     <div class="modal fade" id="kt_modal_new_card" tabindex="-1" aria-hidden="true">
         <!--begin::Modal dialog-->

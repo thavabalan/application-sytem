@@ -53,11 +53,18 @@ Route::get('/admin',[ApplicationController::class,'admindashboard'])->middleware
 Route::get('/admin/subject',[ApplicationController::class,'addsubjectview'])->middleware('admin')->name('addsubjectview');
 Route::post('/admin/subject',[ApplicationController::class,'addsubject'])->middleware('admin')->name('addsubject');
 Route::get('/admin/subject/delete/{id}', [ApplicationController::class, 'deletesubject'])->middleware('admin')->name('deletesubject');
+Route::get('/admin/notification',[ApplicationController::class,'notification'])->middleware('admin')->name('notification');
+Route::post('/admin/notification/{id}',[ApplicationController::class,'addnotification'])->middleware('admin')->name('addnotification');
+Route::post('/admin/notification/edit/{id}',[ApplicationController::class,'editnotification'])->middleware('admin')->name('editnotification');
+
+Route::get('/admin/notification/all',[ApplicationController::class,'allnotification'])->middleware('admin')->name('allnotification');
+Route::get('/admin/notification/delete/{id}',[ApplicationController::class,'deletenotification'])->middleware('admin')->name('deletenotification');
 
 Route::get('/admin/scholarship/application/{id}',[ApplicationController::class,'scholarshipapplicationsview'])->middleware('admin')->name('scholarship.application');
 Route::get('/admin/course/application/{id}',[ApplicationController::class,'courseapplicationsview'])->middleware('admin')->name('course.application');
 
-Route::get('/studentapplications',[ApplicationController::class,'applications'])->middleware('applicant')->name('applications');
+Route::get('/studentapplications',[ApplicationController::class,'applications'])->middleware('applicant')->name('applications'); 
+Route::get('/studentnotification',[ApplicationController::class,'studentnotification'])->middleware('applicant')->name('studentnotification');
 Route::get('/application',[ApplicationController::class,'index'])->middleware('applicant')->name('application.index');
 Route::get('/offerletter',[ApplicationController::class,'offerletter'])->middleware('applicant')->name('application.offerletter');
 

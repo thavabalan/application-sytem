@@ -9,6 +9,7 @@ use App\Models\Application;
 use App\Models\User;
 use App\Models\ApplicationFile;
 use App\Models\Subject;
+use App\Models\Notification;
 use Illuminate\Support\Facades\Auth;
 use File;
 class ApplicationController extends Controller
@@ -174,5 +175,48 @@ class ApplicationController extends Controller
         $subjects = Subject::all();
         return view('admin.subject',['subjects' => $subjects]);
     }
-   
+
+    public function notification(){
+        $users = User::all();
+
+        return view('admin.notification',['users' => $users]);
+    }
+
+    public function addnotification(Request $request,$id){
+
+        $notification = Notification::create([
+            'user_id' => $id,
+            'text' => $request->content
+        ]);
+
+        return redirect()->route('notification');
+    }
+
+    public function allnotification(){
+
+    $notifications = Notification::all();
+
+    return view('admin.allnotification',['notifications' => $notifications]);
+    }
+
+    public function editnotification(Request $request,$id){
+        $notification = Notification::find($id);
+        $notification->update([
+            'text' => $request->content
+        ]);
+        return redirect()->route('allnotification');
+    }
+
+    public function deletenotification($id){
+        $notification = Notification::find($id);
+        $notification->delete();
+        return redirect()->route('allnotification');
+    }
+
+    public function studentnotification(){
+
+        $notifications = Notification::where('user_id',Auth::id())->get();
+
+        return view('student.notification',['notifications'=>$notifications]);
+    }
 }
