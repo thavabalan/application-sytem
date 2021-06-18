@@ -48,7 +48,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                O/L Result
+                <h3 class="card-title">                High School Result (SSCE)
                 </h3>
 
             </div>
@@ -62,8 +62,8 @@
                             <span class="required">File</span>
                         </label>
                         <!--end::Label-->
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="O/L Result" />
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="O/L Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="High School Result (SSCE)" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="High School Result (SSCE)" />
 
                         <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
                     </div>
@@ -82,7 +82,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                A/L Result
+                <h3 class="card-title">                High School 2nd Seat (if any)
                 </h3>
 
             </div>
@@ -96,8 +96,8 @@
                             <span class="required">File</span>
                         </label>
                         <!--end::Label-->
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="A/L Result" />
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="A/L Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="High School 2nd Seat" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="High School 2nd Seat" />
 
                         <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
                     </div>
@@ -116,7 +116,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                UTME Result
+                <h3 class="card-title">                JAMB Score (if available)
                 </h3>
 
             </div>
@@ -130,8 +130,8 @@
                             <span class="required">File</span>
                         </label>
                         <!--end::Label-->
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="UTME Result" />
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="UTME Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="JAMB Score" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="JAMB Score" />
 
                         <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
                     </div>
@@ -150,7 +150,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                University Transcript Result
+                <h3 class="card-title">                University Transcript Result (for transfer student)
                 </h3>
 
             </div>
@@ -184,7 +184,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                Guarantor Recommendation Result
+                <h3 class="card-title">   Any National ID Proof
                 </h3>
 
             </div>
@@ -218,7 +218,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                Internation Passport(Foreign)
+                <h3 class="card-title">                International Passport (if available)
                 </h3>
 
             </div>
@@ -232,8 +232,8 @@
                             <span class="required">File</span>
                         </label>
                         <!--end::Label-->
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="   Internation Passport " />
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="   Internation Passport" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="   International Passport " />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="   International Passport" />
 
                         <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
                     </div>
