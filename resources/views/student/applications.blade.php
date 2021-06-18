@@ -35,7 +35,6 @@
                                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0" role="row">
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Course Name</th>
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Scholarship</th>
-                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Eligibility criteria</th>
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Status </th>
 
                                     
@@ -57,7 +56,7 @@
                                             <span class="badge badge-light-warning fs-8 fw-bolder">Processing</span>
                                             @elseif($item->status === 'Approved')
                                             <span class="badge badge-light-success fs-8 fw-bolder">Accepted</span>
-                                            <a href="{{$item->offer_letter}}" class="menu-link px-3">Your offerletter</a>
+                                            <a href="{{$item->offer_letter}}" target="_blank" class="menu-link px-3">Your offerletter</a>
                                             @elseif($item->status === 'Rejected')
                                             <span class="badge badge-light-danger fs-8 fw-bolder">Rejected</span>
                                             @endif

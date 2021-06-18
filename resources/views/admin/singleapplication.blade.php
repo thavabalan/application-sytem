@@ -787,7 +787,7 @@
                             <form action="{{route('admin.applications.approve',$application->id)}}" method="post" enctype="multipart/form-data">
                                 @csrf
                             <div class="text-gray-400 fw-bold fs-5">Add Offer Letter
-                                <input type="file" class="form-control form-control-solid" placeholder="" name="offerletter" value="" />
+                                <input type="file" class="form-control form-control-solid" placeholder="" name="offerletter" value="" required/>
 
                             <!--end::Description-->
                         </div>

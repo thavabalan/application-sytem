@@ -20,10 +20,13 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
-    
+    return view('student.index');
+  
 })->middleware(['auth'])->name('dashboard');
-
+Route::get('/newapplication', function () {
+    return view('dashboard');
+  
+})->middleware(['auth'])->name('newapplication');
 Route::get('/result',  [PageController::class, 'resultadd'])->middleware('applicant')->name('result');
 Route::post('/result', [PageController::class, 'result'])->middleware('applicant')->name('save');
 Route::post('/scholarhip', [PageController::class, 'addscholarship'])->middleware('admin')->name('addscholarship');

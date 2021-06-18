@@ -45,6 +45,7 @@
                         <div class="text-center mb-10">
                             <!--begin::Title-->
                             <h1 class="text-dark mb-3">Forgot Password ?</h1>
+                            <x-auth-validation-errors class="mb-4" :errors="$errors" />
                             <!--end::Title-->
                             <!--begin::Link-->
                             <div class="text-gray-400 fw-bold fs-4">Enter your email to reset your password.</div>
@@ -73,15 +74,7 @@
             </div>
             <!--end::Content-->
             <!--begin::Footer-->
-            <div class="d-flex flex-center flex-wrap fs-6 p-5 pb-0">
-                <!--begin::Links-->
-                <div class="d-flex flex-center fw-bold fs-6">
-                    <a href="https://keenthemes.com/faqs" class="text-muted text-hover-primary px-2" target="_blank">About</a>
-                    <a href="https://keenthemes.com/support" class="text-muted text-hover-primary px-2" target="_blank">Support</a>
-                    <a href="https://1.envato.market/EA4JP" class="text-muted text-hover-primary px-2" target="_blank">Purchase</a>
-                </div>
-                <!--end::Links-->
-            </div>
+           
             <!--end::Footer-->
         </div>
         <!--end::Body-->

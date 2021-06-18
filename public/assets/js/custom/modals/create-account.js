@@ -204,14 +204,6 @@ var KTCreateAccount = function () {
 							
 						}
 					},
-					'lga': {
-						validators: {
-							notEmpty: {
-								message: 'LGA is Required'
-							},
-							
-						}
-					},
 					'gender': {
 						validators: {
 							notEmpty: {

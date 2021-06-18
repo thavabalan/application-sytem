@@ -65,7 +65,7 @@ class RegisteredUserController extends Controller
             'address' => $request->address,
             'nationality' => $request->nationality,
             'state' => $request->state,
-            'lga' => $request->lga,
+            'lga' => '',
             'profile' => $public_path,
             'admission_type' => $request->admission_type,
             'guardian_firstname' => $request->guardian_firstname,

@@ -32,7 +32,7 @@
                        <tr>
                            <td>{{$item->title}}</td>
                            <td>{{$item->description}}</td>
-                           <td><a href="{{$item->file}}" class="menu-link px-3">View</a>
+                           <td><a href="{{$item->file}}" target="_blank" class="menu-link px-3">View</a>
                            </td>
                        </tr>
 
@@ -48,7 +48,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                O/L Result
+                <h3 class="card-title">               Highschool (SSCE/UTME)
                 </h3>
 
             </div>
@@ -62,8 +62,8 @@
                             <span class="required">File</span>
                         </label>
                         <!--end::Label-->
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="O/L Result" />
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="O/L Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="Highschool (SSCE/UTME)" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="Highschool (SSCE/UTME)" />
 
                         <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
                     </div>
@@ -82,7 +82,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                A/L Result
+                <h3 class="card-title">2nd Seat Highschool (SSCE/UTME)
                 </h3>
 
             </div>
@@ -96,8 +96,8 @@
                             <span class="required">File</span>
                         </label>
                         <!--end::Label-->
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="A/L Result" />
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="A/L Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="2nd Seat Highschool (SSCE/UTME)" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="2nd Seat Highschool (SSCE/UTME)" />
 
                         <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
                     </div>
@@ -116,7 +116,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                UTME Result
+                <h3 class="card-title">JAMB
                 </h3>
 
             </div>
@@ -130,8 +130,8 @@
                             <span class="required">File</span>
                         </label>
                         <!--end::Label-->
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="UTME Result" />
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="UTME Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="JAMB" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="JAMB" />
 
                         <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
                     </div>
@@ -150,7 +150,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                University Transcript Result
+                <h3 class="card-title">University Transcript (If transfer case)
                 </h3>
 
             </div>
@@ -164,8 +164,8 @@
                             <span class="required">File</span>
                         </label>
                         <!--end::Label-->
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value=" University Transcript Result" />
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value=" University Transcript Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value=" University Transcript (If transfer case)" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value=" University Transcript (If transfer case)" />
 
                         <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
                     </div>
@@ -184,7 +184,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                Guarantor Recommendation Result
+                <h3 class="card-title"> Any National ID
                 </h3>
 
             </div>
@@ -198,8 +198,8 @@
                             <span class="required">File</span>
                         </label>
                         <!--end::Label-->
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="  Guarantor Recommendation Result" />
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="  Guarantor Recommendation Result" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="Any National ID" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value=" Any National ID" />
 
                         <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
                     </div>
