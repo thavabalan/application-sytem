@@ -35,8 +35,8 @@
                                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0" role="row">
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Course Name</th>
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Department</th>
-                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Eligibility criteria</th>
-                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Degree in view </th>
+                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Degree in view</th>
+                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1"> Eligibility criteria</th>
                                     <th class="min-w-100px  sorting_disabled" rowspan="1" colspan="1">Action </th>
                                     
                                 </tr>

@@ -85,7 +85,7 @@ class PageController extends Controller
             'elegibility_criteria' => $request->elegibility_criteria,
             'degree_in_view' => $request->degree_in_view
         ]);
-        return redirect('/course');
+        return redirect()->route('course');
 
     }
 
@@ -95,7 +95,7 @@ class PageController extends Controller
 
         $course->delete();
 
-        return redirect('/course');
+        return redirect()->route('course');
     }
 
     public function editcourse(Request $request,$id){
@@ -109,7 +109,7 @@ class PageController extends Controller
             'elegibility' => $request->elegibility
         ]);
 
-        return redirect('/course');
+        return redirect()->route('course');
     }
 
     public function addscholarship(Request $request){
