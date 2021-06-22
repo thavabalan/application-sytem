@@ -10,14 +10,38 @@ Like: www.facebook.com/keenthemes
 License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.-->
 <html lang="en">
 	<!--begin::Head-->
+	
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="121463063021741">
+      </div>
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Application Portal</title>
-		<meta name="description" content="Craft admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
-		<meta name="keywords" content="Craft, bootstrap, Angular 10, Vue, React, Laravel, admin themes, free admin themes, bootstrap admin, bootstrap dashboard" />
-		<link rel="canonical" href="Https://preview.keenthemes.com/start" />
+		<title>Mewar University Nigeria Admission & Scholarship Portal</title>
+		<meta name="description" content="MIU Nigeria's dedicated portal for admissions and your Nigerian gateway for experience of study in India" />
+		<meta name="keywords" content="Study in India, Mewar University Courses offered, India in Nigeria, Scholarships" />
+		<link rel="canonical" href="https://portal.miu.edu.ng" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="shortcut icon" href="{{asset('assets/media/logos/favicon.ico')}}" />
+		<link rel="icon" type="image/png"  href="https://admissionform.miu.edu.ng/assets/media/miulogo.png" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
@@ -42,8 +66,8 @@ License: For each use you must have a valid license purchased only from above li
 					<!--begin::Brand-->
 					<div class="aside-logo flex-column-auto" id="kt_aside_logo">
 						<!--begin::Logo-->
-						<a href="/">
-							<img alt="Logo" src="{{asset('assets/media/logo2.png')}}" class="h-15px logo" />
+						<a href="https://admissionform.miu.edu.ng/dashboard">
+							<img alt="Logo" src="{{asset('assets/media/logo2.png')}}" class="h-45px logo" />
 						</a>
 						<!--end::Logo-->
 						<!--begin::Aside toggler-->
@@ -254,8 +278,8 @@ License: For each use you must have a valid license purchased only from above li
 							<!--end::Aside mobile toggle-->
 							<!--begin::Mobile logo-->
 							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-								<a href="/" class="d-lg-none">
-									<img alt="Logo" src="{{asset('assets/media/logo2.png')}}" class="h-15px" />
+								<a href="https://admissionform.miu.edu.ng/dashboard" class="d-lg-none">
+									<img alt="Logo" src="{{asset('assets/media/logo2.png')}}" class="h-45px" />
 								</a>
 							</div>
 							<!--end::Mobile logo-->
@@ -346,23 +370,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Menu-->
 										</div>
 										<!--end::User -->
-										<!--begin::Heaeder menu toggle-->
-										<div class="d-flex align-items-center d-lg-none ms-2 me-n3" data-bs-toggle="tooltip" title="Show header menu">
-											<div class="btn btn-icon btn-active-light-primary" id="kt_header_menu_mobile_toggle">
-												<!--begin::Svg Icon | path: icons/stockholm/Text/Toggle-Right.svg-->
-												<span class="svg-icon svg-icon-1">
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-															<rect x="0" y="0" width="24" height="24" />
-															<path fill-rule="evenodd" clip-rule="evenodd" d="M22 11.5C22 12.3284 21.3284 13 20.5 13H3.5C2.6716 13 2 12.3284 2 11.5C2 10.6716 2.6716 10 3.5 10H20.5C21.3284 10 22 10.6716 22 11.5Z" fill="black" />
-															<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M14.5 20C15.3284 20 16 19.3284 16 18.5C16 17.6716 15.3284 17 14.5 17H3.5C2.6716 17 2 17.6716 2 18.5C2 19.3284 2.6716 20 3.5 20H14.5ZM8.5 6C9.3284 6 10 5.32843 10 4.5C10 3.67157 9.3284 3 8.5 3H3.5C2.6716 3 2 3.67157 2 4.5C2 5.32843 2.6716 6 3.5 6H8.5Z" fill="black" />
-														</g>
-													</svg>
-												</span>
-												<!--end::Svg Icon-->
-											</div>
-										</div>
-										<!--end::Heaeder menu toggle-->
+							
 									</div>
 									<!--end::Toolbar wrapper-->
 								</div>

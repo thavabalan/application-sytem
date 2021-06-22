@@ -12,12 +12,12 @@ License: For each use you must have a valid license purchased only from above li
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Application Portal</title>
-		<meta name="description" content="Craft admin dashboard live demo. Check out all the features of the admin panel. A large number of settings, additional services and widgets." />
-		<meta name="keywords" content="Craft, bootstrap, Angular 10, Vue, React, Laravel, admin themes, free admin themes, bootstrap admin, bootstrap dashboard" />
-		<link rel="canonical" href="Https://preview.keenthemes.com/start" />
+		<title>Mewar University Nigeria Admission & Scholarship Portal</title>
+		<meta name="description" content="MIU Nigeria's dedicated portal for admissions and your Nigerian gateway for experience of study in India at MIU the first Indian University in Africa" />
+		<meta name="keywords" content="Study in India, Mewar University Courses offered, India in Nigeria, Scholarships" />
+		<link rel="canonical" href="https://portal.miu.edu.ng" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<link rel="icon" type="image/png"  href="https://admissionform.miu.edu.ng/assets/media/miulogo.png" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->

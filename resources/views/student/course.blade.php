@@ -34,8 +34,8 @@
                             <thead>
                                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0" role="row">
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Course Name</th>
-                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Department</th>
-                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Degree in view</th>
+                                 
+                                   
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1"> Eligibility criteria</th>
                                     <th class="min-w-100px  sorting_disabled" rowspan="1" colspan="1">Action </th>
                                     
@@ -47,9 +47,8 @@
                                 
                                 @foreach ($courses as $item)
                                     <tr>
-                                        <td>{{$item->title}}</td>
-                                        <td>{{$item->department}}</td>
-                                        <td>{{$item->degree_in_view}}</td>
+                                        <td>{{$item->degree_in_view}} {{$item->title}}<br/>@ <br/>{{$item->department}}</td>
+                                      
                                         <td>{{$item->elegibility_criteria}}</td>
                                         <td><a href="{{route('scholarship.apply',['scholarid'=>$scholarship->id,'courseid'=>$item->id])}}" class="btn btn-sm btn-light btn-active-light-primary" >Select</a>
                                         </td>

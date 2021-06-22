@@ -1,5 +1,30 @@
 @extends('layouts.guest')    
 @section('content')
+
+
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="121463063021741">
+      </div>
     
 <div class="d-flex flex-column flex-root">
     <!--begin::Authentication - Sign-in -->
@@ -14,7 +39,7 @@
                 </a>
                 <!--end::Logo-->
                 <!--begin::Title-->
-                <h1 class="fw-bolder fs-2qx pb-5 pb-md-10" >Welcome To MIU Central Scholarships Portal</h1>
+                <h1 class="fw-bolder fs-2qx pb-5 pb-md-10" >Welcome To MIU Central Admissions & Scholarships Portal</h1>
                 <!--end::Title-->
                 <!--begin::Description-->
                 <p class="fw-bold fs-2" style="color: #986923;">Don't Have an Account

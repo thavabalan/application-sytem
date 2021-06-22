@@ -184,7 +184,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title"> Any National ID
+                <h3 class="card-title"> Any ID (Passport/Driving Licence etc)
                 </h3>
 
             </div>
@@ -218,7 +218,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">                Internation Passport(Foreign)
+                <h3 class="card-title">                Registration Fees Payment Proof
                 </h3>
 
             </div>
@@ -232,8 +232,8 @@
                             <span class="required">File</span>
                         </label>
                         <!--end::Label-->
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="   Internation Passport " />
-                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="   Internation Passport" />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="   Registration Fees Payment Proof " />
+                        <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="   Registration Fees Payment Proof" />
 
                         <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
                     </div>

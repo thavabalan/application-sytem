@@ -17,7 +17,7 @@
                 <div class="col-lg-3">
                     <!--begin::Option-->
                     <!--begin::Option-->
-                    <label class="form-label fw-bolder text-dark fs-6">Exam Type</label>
+                    <label class="form-label fw-bolder text-dark fs-6">High School UTME/SSCE Exam Type</label>
                     <select name="OLevelExamType" id="ExamType" class="form-control">
                         <option value="">Select Exam Type</option>
                         <option value="WAEC">WAEC</option>
@@ -79,7 +79,8 @@
                         <option value="1994">1994</option>
                         <option value="1993">1993</option>
                         <option value="1992">1992</option>
-                        <option value="1991">1991</option>                                        
+                        <option value="1991">1991</option>       
+                                      <option value="Older">Older</option>                                         
                     </select>
                     <!--end::Option-->
                 </div>
@@ -103,7 +104,7 @@
                     <!--begin::Card title-->
                     <!--begin::Card toolbar-->
                     <div class="card-toolbar">
-                        <button type="button" class="btn btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_product">Add Result</button>
+                        <button type="button" class="btn btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_product">Add Subjects Result</button>
                         <button type="button" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">
                             Upload Result
                         </button>

@@ -35,7 +35,7 @@
                                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0" role="row">
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Course Name</th>
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Scholarship</th>
-                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Degree in view </th>
+                                    
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Status </th>
 
                                     
@@ -47,9 +47,8 @@
                                 
                                 @foreach ($applications as $item)
                                     <tr>
-                                        <td>{{$item->course->title}}</td>
+                                        <td>{{$item->course->degree_in_view}} {{$item->course->title}}</td>
                                         <td>{{$item->scholarship->title}}</td>
-                                        <td>{{$item->course->degree_in_view}}</td>
                                         <td>
                                             @if($item->status === 'Submitted')
                                             <span class="badge badge-light-primary fs-8 fw-bolder">Submitted</span>
@@ -95,4 +94,6 @@
    <x-slot name="script">
        
    </x-slot>
+   <h2 align="center" class="fw-bolder">Latest updates on Facebook</h2> <p align="center"> 
+   <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmewaruniversitynigeria&tabs=timeline%2C%20%20events%2C%20messages&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2996869833749594" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></p>
 </x-app-layout>

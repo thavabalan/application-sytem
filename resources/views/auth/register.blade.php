@@ -105,8 +105,8 @@
                         <!--end::Icon-->
                         <!--begin::Label-->
                         <div class="stepper-label">
-                            <h3 class="stepper-title">Jamb Result</h3>
-                            <div class="stepper-desc fw-bold">Woah, we are here</div>
+                            <h3 class="stepper-title">Jamb Result (If Available)</h3>
+                            <div class="stepper-desc fw-bold">Congrats, you are almost done</div>
                         </div>
                         <!--end::Label-->
                     </div>
@@ -356,16 +356,16 @@
                                         <!--begin::Col-->
                                         <div class="col-lg-6">
                                             <!--begin::Option-->
-                                            <label class="form-label fw-bolder text-dark fs-6">Admission Type</label>
+                                            <label class="form-label fw-bolder text-dark fs-6">Admission Category</label>
                                             <select name="admission_type" class="form-select form-select-lg form-select-solid" data-control="select2" data-placeholder="Select..." data-allow-clear="true" >
                                                 <option value="">Select Application Type</option>                                            
                                                 <option value="JAMB UTME">JAMB UTME</option>
-                                                <option value="JAMB DE">JAMB DE</option>
-                                                <option value="Local Transfer">Local Transfer</option>
+                                                <option value="NON JAMB">NON JAMB</option>
+                                                <option value="Local Transfer">National Transfer</option>
                                                 <option value="Foreign Transfer">Foreign Transfer</option>
                                                 <option value="Foreign Fresh Admission">Foreign Fresh Admission</option>
 
-                                                <option value="Conditional Admission">Conditional Admission</option>
+                                                <option value="Lateral Entry Admission">Lateral/Directly Entry Admission</option>
                                             </select>
                                             <!--end::Option-->
                                         </div>
@@ -400,7 +400,7 @@
                                 <!--begin::Heading-->
                                 <div class="pb-10 pb-lg-15">
                                     <!--begin::Title-->
-                                    <h2 class="fw-bolder text-dark">Guardian</h2>
+                                    <h2 class="fw-bolder text-dark">Guardian Details</h2>
                                     <!--end::Title-->
                                     <!--begin::Notice-->
                                     <div class="text-gray-400 fw-bold fs-6">Fill your guardian details
@@ -494,7 +494,7 @@
                                 <!--begin::Heading-->
                                 <div class="pb-10 pb-lg-12">
                                     <!--begin::Title-->
-                                    <h2 class="fw-bolder text-dark">Jamb Result (If required)</h2>
+                                    <h2 class="fw-bolder text-dark">Jamb Result (If Available)</h2>
                                     <!--end::Title-->
                                     <!--begin::Notice-->
                                     <div class="text-gray-400 fw-bold fs-6">Your Jamb Result Details
@@ -526,71 +526,21 @@
                                         <!--begin::Col-->
                                         <div class="col-lg-6">
                                             <!--begin::Option-->
-                                            <label class="form-label fw-bolder text-dark fs-6">Subject 1</label>
+                                            <label class="form-label fw-bolder text-dark fs-6">JAMB Subjects (seperate subjects with coma)</label>
                                             <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="jamb_sub1" autocomplete="off" />
                                
                                             <!--end::Option-->
                                         </div>
                                         <div class="col-lg-6">
                                             <!--begin::Option-->
-                                            <label class="form-label fw-bolder text-dark fs-6">Score</label>
+                                            <label class="form-label fw-bolder text-dark fs-6">Total JAMB Score</label>
                                             <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="jamb_sub1score" autocomplete="off" />
                                
                                             <!--end::Option-->
                                         </div>
                                     </div>
                                    
-                                    <div class="row">
-                                        <!--begin::Col-->
-                                        <div class="col-lg-6">
-                                            <!--begin::Option-->
-                                            <label class="form-label fw-bolder text-dark fs-6">Subject 2</label>
-                                            <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="jamb_sub2" autocomplete="off" />
-                               
-                                            <!--end::Option-->
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <!--begin::Option-->
-                                            <label class="form-label fw-bolder text-dark fs-6">Score</label>
-                                            <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="jamb_sub2score" autocomplete="off" />
-                               
-                                            <!--end::Option-->
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <!--begin::Col-->
-                                        <div class="col-lg-6">
-                                            <!--begin::Option-->
-                                            <label class="form-label fw-bolder text-dark fs-6">Subject 3</label>
-                                            <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="jamb_sub3" autocomplete="off" />
-                               
-                                            <!--end::Option-->
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <!--begin::Option-->
-                                            <label class="form-label fw-bolder text-dark fs-6">Score</label>
-                                            <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="jamb_sub3score" autocomplete="off" />
-                               
-                                            <!--end::Option-->
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <!--begin::Col-->
-                                        <div class="col-lg-6">
-                                            <!--begin::Option-->
-                                            <label class="form-label fw-bolder text-dark fs-6">Subject 4</label>
-                                            <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="jamb_sub4" autocomplete="off" />
-                               
-                                            <!--end::Option-->
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <!--begin::Option-->
-                                            <label class="form-label fw-bolder text-dark fs-6">Score</label>
-                                            <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="jamb_sub4score" autocomplete="off" />
-                               
-                                            <!--end::Option-->
-                                        </div>
-                                    </div>
+                                   
                                     <!--end::Input-->
                                 </div>
                                 <!--end::Input group-->
