@@ -12,6 +12,8 @@ use App\Models\Subject;
 use App\Models\Notification;
 use Illuminate\Support\Facades\Auth;
 use File;
+use PDF;
+
 class ApplicationController extends Controller
 {
     public function index(){
@@ -38,7 +40,14 @@ class ApplicationController extends Controller
         
         return view('student.applications',['applications'=>$applications]);
     }
+    public function printapplication($id){
+        
+        $application = Application::find($id);
+        $pdf = PDF::loadView('student.print', ['application'=>$application]);
 
+        return $pdf->download('pdf_file.pdf');
+        
+    }
     public function adminapplication(){
         
         $applications = Application::all();

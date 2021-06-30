@@ -37,7 +37,7 @@
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Scholarship</th>
                                     
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Status </th>
-
+                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Print </th>
                                     
                                 </tr>
                             </thead>
@@ -62,6 +62,7 @@
                                             @endif
                                         </td>
                                         </td>
+                                        <td><a href="{{route('applicationsprint',$item->id)}}">Print</a>
                                     </tr>
                                 @endforeach
                                 

@@ -380,6 +380,37 @@ var KTCreateAccount = function () {
 				}
 			}
 		));
+		validations.push(FormValidation.formValidation(
+			form,
+			{
+				fields: {
+					'admission_type': {
+						validators: {
+							notEmpty: {
+								message: 'Admission type is required'
+							}
+						}
+					},
+					'is_hotel': {
+						validators: {
+							notEmpty: {
+								message: 'Hotel is required'
+							}
+						}
+					},
+					
+				},
+				plugins: {
+					trigger: new FormValidation.plugins.Trigger(),
+					// Bootstrap Framework Integration
+					bootstrap: new FormValidation.plugins.Bootstrap5({
+						rowSelector: '.fv-row',
+                        eleInvalidClass: '',
+                        eleValidClass: ''
+					})
+				}
+			}
+		));
 		
 	}
 

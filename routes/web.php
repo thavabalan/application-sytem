@@ -67,6 +67,7 @@ Route::get('/admin/scholarship/application/{id}',[ApplicationController::class,'
 Route::get('/admin/course/application/{id}',[ApplicationController::class,'courseapplicationsview'])->middleware('admin')->name('course.application');
 
 Route::get('/studentapplications',[ApplicationController::class,'applications'])->middleware('applicant')->name('applications'); 
+Route::get('/studentapplication/{id}',[ApplicationController::class,'printapplication'])->middleware('applicant')->name('applicationsprint'); 
 Route::get('/studentnotification',[ApplicationController::class,'studentnotification'])->middleware('applicant')->name('studentnotification');
 Route::get('/application',[ApplicationController::class,'index'])->middleware('applicant')->name('application.index');
 Route::get('/offerletter',[ApplicationController::class,'offerletter'])->middleware('applicant')->name('application.offerletter');
