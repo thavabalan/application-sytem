@@ -43,7 +43,7 @@ Route::post('/scholarhip/edit/{id}', [PageController::class, 'editscholarship'])
 Route::get('/scholarhip/delete/{id}', [PageController::class, 'deletescholarship'])->middleware('admin')->name('deletescholarship');
 
 Route::get('/upload',[PageController::class, 'upload'])->middleware('applicant')->name('upload');
-Route::post('/uploadreport',[PageController::class, 'postupload'])->middleware('applicant')->name('postupload');
+Route::post('/upload',[PageController::class, 'postupload'])->middleware('applicant')->name('postupload');
 Route::get('/admin/application',[ApplicationController::class,'adminapplication'])->middleware('admin')->name('admin.applications');
 Route::get('/admin/application/{id}',[ApplicationController::class,'singleadminapplication'])->middleware('admin')->name('admin.applications.show');
 Route::post('/admin/application/approve/{id}',[ApplicationController::class,'approveapplication'])->middleware('admin')->name('admin.applications.approve');

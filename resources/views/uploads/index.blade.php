@@ -65,7 +65,7 @@
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="Highschool (SSCE/UTME)" />
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="Highschool (SSCE/UTME)" />
 
-                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" required/>
                     </div>
                     <div class="text-center pt-15">
                         <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
@@ -99,7 +99,7 @@
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="2nd Seat Highschool (SSCE/UTME)" />
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="2nd Seat Highschool (SSCE/UTME)" />
 
-                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" required/>
                     </div>
                     <div class="text-center pt-15">
                         <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
@@ -133,7 +133,7 @@
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="JAMB" />
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="JAMB" />
 
-                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" required/>
                     </div>
                     <div class="text-center pt-15">
                         <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
@@ -167,7 +167,7 @@
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value=" University Transcript (If transfer case)" />
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value=" University Transcript (If transfer case)" />
 
-                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" required/>
                     </div>
                     <div class="text-center pt-15">
                         <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
@@ -201,7 +201,7 @@
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="Any National ID" />
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value=" Any National ID" />
 
-                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" required/>
                     </div>
                     <div class="text-center pt-15">
                         <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
@@ -235,7 +235,7 @@
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="title" value="   Registration Fees Payment Proof " />
                         <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="   Registration Fees Payment Proof" />
 
-                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                        <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" required/>
                     </div>
                     <div class="text-center pt-15">
                         <button type="submit" id="kt_modal_new_card_submit12" class="btn btn-primary">
@@ -308,7 +308,7 @@
                                 <span class="required">File</span>
                             </label>
                             <!--end::Label-->
-                            <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" />
+                            <input type="file" class="form-control form-control-solid" placeholder="" name="file" value="" required />
                         </div>
                         <!--end::Input group-->
                         <!--begin::Input group-->
