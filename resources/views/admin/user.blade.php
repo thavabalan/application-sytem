@@ -20,7 +20,7 @@
                         <th>First Name</th>
                         <th>Email</th>
                         <th>Mobile Number</th>
-                        
+                        <th>Number of Application</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,7 +30,7 @@
                         <td>{{$item->firstname}}</td>
                         <td>{{$item->email}}</td>
                         <td>{{$item->mobilenumber}}</td>
-                        
+                        <td>{{$item->applications_count}}</td>
                     </tr>
                 @endforeach
                    

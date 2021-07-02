@@ -74,7 +74,7 @@ class PageController extends Controller
         return view('course.index',['courses' => $courses]);
     }
     public function users(){
-        $users = User::all();
+        $users = User::withCount('applications')->get();
 
         return view('admin.user',['users' => $users]);
     }
