@@ -57,6 +57,8 @@ Route::get('/admin/subject',[ApplicationController::class,'addsubjectview'])->mi
 Route::post('/admin/subject',[ApplicationController::class,'addsubject'])->middleware('admin')->name('addsubject');
 Route::get('/admin/subject/delete/{id}', [ApplicationController::class, 'deletesubject'])->middleware('admin')->name('deletesubject');
 Route::get('/admin/notification',[ApplicationController::class,'notification'])->middleware('admin')->name('notification');
+Route::get('/admin/users',[PageController::class,'users'])->middleware('admin')->name('users');
+
 Route::post('/admin/notification/{id}',[ApplicationController::class,'addnotification'])->middleware('admin')->name('addnotification');
 Route::post('/admin/notification/edit/{id}',[ApplicationController::class,'editnotification'])->middleware('admin')->name('editnotification');
 

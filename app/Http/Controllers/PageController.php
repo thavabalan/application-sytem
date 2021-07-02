@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Exam;
+use App\Models\User;
 use App\Models\Result;
 use App\Models\Course;
 use App\Models\Scholarship;
@@ -72,7 +73,11 @@ class PageController extends Controller
 
         return view('course.index',['courses' => $courses]);
     }
+    public function users(){
+        $users = User::all();
 
+        return view('admin.user',['users' => $users]);
+    }
     public function scholarship(){
         $scholarships = Scholarship::all()->except(1);
         return view('scholarship.index',['scholarships' => $scholarships]);

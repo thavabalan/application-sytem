@@ -17,7 +17,9 @@ use PDF;
 class ApplicationController extends Controller
 {
     public function index(){
-        return view('student.index');
+        $notifications = Notification::where('user_id',Auth::id())->get();
+
+        return view('student.index',['notifications'=>$notifications]);
     }
 
     public function scholarship(){

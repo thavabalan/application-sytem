@@ -567,7 +567,7 @@
                                             <td>
                                                 {{$item->description}}
                                             </td>
-                                            <td><a href="{{$item->file}}" class="btn btn-sm btn-light btn-active-light-primary">PDF</a></td>
+                                            <td><a href="{{$item->file}}" class="btn btn-sm btn-light btn-active-light-primary" target="_blank">PDF</a></td>
                                             
                                             
                                         </tr>
