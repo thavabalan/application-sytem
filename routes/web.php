@@ -18,11 +18,9 @@ use App\Http\Controllers\ApplicationController;
 Route::get('/', function () {
     return view('auth.login');
 });
+Route::get('/dashboard',  [ApplicationController::class, 'index'])->middleware('applicant')->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return view('student.index');
-  
-})->middleware(['auth'])->name('dashboard');
+
 Route::get('/newapplication', function () {
     return view('dashboard');
   

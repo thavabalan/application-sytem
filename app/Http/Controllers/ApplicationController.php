@@ -19,7 +19,7 @@ class ApplicationController extends Controller
     public function index(){
         $notifications = Notification::where('user_id',Auth::id())->get();
 
-        return view('student.index',['notifications'=>$notifications]);
+        return view('student.index',['notifications'=>  $notifications]);
     }
 
     public function scholarship(){
