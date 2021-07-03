@@ -14,7 +14,8 @@ class Application extends Model
         'scholarship_id',
         'course_id',
         'status',
-        'offer_letter'
+        'offer_letter',
+        'payment'
     ];
 
     public function user()

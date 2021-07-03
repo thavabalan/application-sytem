@@ -23,6 +23,9 @@ Route::get('/dashboard',  [ApplicationController::class, 'index'])->middleware('
 
 Route::get('/newapplication', function () {
     return view('dashboard');
+
+
+
   
 })->middleware(['auth'])->name('newapplication');
 Route::get('/result',  [PageController::class, 'resultadd'])->middleware('applicant')->name('result');
@@ -65,6 +68,9 @@ Route::get('/admin/notification/delete/{id}',[ApplicationController::class,'dele
 
 Route::get('/admin/scholarship/application/{id}',[ApplicationController::class,'scholarshipapplicationsview'])->middleware('admin')->name('scholarship.application');
 Route::get('/admin/course/application/{id}',[ApplicationController::class,'courseapplicationsview'])->middleware('admin')->name('course.application');
+
+Route::post('/pay', [PaymentController::class, 'redirectToGateway'])->name('pay');
+Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
 Route::get('/studentapplications',[ApplicationController::class,'applications'])->middleware('applicant')->name('applications'); 
 Route::get('/studentapplication/{id}',[ApplicationController::class,'printapplication'])->middleware('applicant')->name('applicationsprint'); 

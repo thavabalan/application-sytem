@@ -39,7 +39,7 @@ class ApplicationController extends Controller
     public function applications(){
         
         $applications = Application::where('user_id',Auth::id())->get();
-        
+       
         return view('student.applications',['applications'=>$applications]);
     }
     public function printapplication($id){

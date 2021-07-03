@@ -18,6 +18,8 @@ class AddFieldToApplications extends Migration
             $table->unsignedBigInteger('scholarship_id');
             $table->unsignedBigInteger('course_id');
             $table->string('status')->nullable()->default('submitted');
+            $table->unsignedBigInteger('payment')->nullable();
+
         });
     }
 

@@ -5,6 +5,21 @@
         </h2>
     </x-slot>
 
+    <?php
+// more details https://paystack.com/docs/payments/multi-split-payments/#dynamic-splits
+
+$split = [
+   "type" => "percentage",
+   "currency" => "KES",
+   "subaccounts" => [
+    [ "subaccount" => "ACCT_li4p6kte2dolodo", "share" => 10 ],
+    [ "subaccount" => "ACCT_li4p6kte2dolodo", "share" => 30 ],
+   ],
+   "bearer_type" => "all",
+   "main_account_share" => 70
+];
+?>
+
     <div class="row gy-5 g-xl-8">
         <!--begin::Col-->
         
@@ -55,8 +70,42 @@
                                             @elseif($item->status === 'Processing')
                                             <span class="badge badge-light-warning fs-8 fw-bolder">Processing</span>
                                             @elseif($item->status === 'Approved')
+                                            @if($item->payment == null)
+    <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="" role="form">
+    <div >
+        <div class="">
+            
+            <input type="hidden" name="email" value="otemuyiwa@gmail.com"> {{-- required --}}
+            <input type="hidden" name="orderID" value="345">
+            <input type="hidden" name="amount" value="800"> {{-- required in kobo --}}
+            <input type="hidden" name="quantity" value="3">
+            <input type="hidden" name="currency" value="NGN">
+            <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
+            <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
+            
+            <input type="hidden" name="split_code" value="SPL_EgunGUnBeCareful"> {{-- to support transaction split. more details https://paystack.com/docs/payments/multi-split-payments/#using-transaction-splits-with-payments --}}
+            <input type="hidden" name="split" value="{{ json_encode($split) }}"> {{-- to support dynamic transaction split. More details https://paystack.com/docs/payments/multi-split-payments/#dynamic-splits --}}
+            {{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
+
+            <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
+
+            <p>
+            <span class="badge badge-light-success fs-8 fw-bolder">Accepted</span>
+
+                <button class="btn btn-success btn-sm btn-block" type="submit" value="Pay Now!">
+                    <i class="fa fa-plus-circle fa-lg"></i> Pay Now!
+                </button>
+            </p>
+        </div>
+    </div>
+</form>
+                                            @else
                                             <span class="badge badge-light-success fs-8 fw-bolder">Accepted</span>
+
                                             <a href="{{$item->offer_letter}}" target="_blank" class="menu-link px-3">Your offerletter</a>
+
+                                            @endif
+                                          
                                             @elseif($item->status === 'Rejected')
                                             <span class="badge badge-light-danger fs-8 fw-bolder">Rejected</span>
                                             @endif
