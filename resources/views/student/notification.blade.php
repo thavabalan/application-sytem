@@ -18,7 +18,7 @@
             <table id="kt_datatable_example_1" class="table table-row-bordered gy-5">
                 <thead>
                     <tr class="fw-bold fs-6 text-muted">
-                        <th>User ID</th>
+                        <th>Notification Date</th>
                         <th>First name</th>
                         <th>Email</th>
                         <th>Content</th>
@@ -29,7 +29,7 @@
                 <tbody>
                     @foreach ($notifications as $item)
                     <tr>
-                        <td>{{$item->id}}</td>
+                        <td>{{$item->updated_at}}</td>
                         <td>{{$item->user->firstname}}</td>
                         <td>{{$item->user->email}}</td>
                         <td>{{$item->text}}</td>

@@ -17,6 +17,7 @@
                         <th>User ID</th>
                         <th>First name</th>
                         <th>Email</th>
+                        <th>Applications</th>
                         <th class="text-end">Action</th>
                        
                     </tr>
@@ -27,6 +28,7 @@
                         <td>{{$item->id}}</td>
                         <td>{{$item->firstname}}</td>
                         <td>{{$item->email}}</td>
+                        <td>{{$item->applications_count}}</td>
                         <td class="text-end">
                             <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">Actions
                             <!--begin::Svg Icon | path: icons/stockholm/Navigation/Angle-down.svg-->

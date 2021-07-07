@@ -12,7 +12,7 @@
             <div class="card bgi-no-repeat card-xl-stretch mb-xl-8" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-4.svg)">
                 <!--begin::Body-->
                 <div class="card-body">
-                    <a href="{{Route('scholarship.single',1)}}" class="card-title fw-bolder text-muted text-hover-primary fs-4">Admission without scholarship</a>
+                    <a href="{{Route('scholarship.single',1)}}" class="card-title fw-bolder text-muted text-hover-primary fs-4">New Course Application without scholarship</a>
                     
                 </div>
                 <!--end::Body-->
@@ -26,7 +26,7 @@
             <div class="card  bgi-no-repeat card-xl-stretch mb-xl-8" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-4.svg)">
                 <!--begin::Body-->
                 <div class="card-body ">
-                    <a href="{{Route('application.scholarship')}}" class="card-title fw-bolder text-muted text-hover-primary fs-4">Admission with scholarship</a>
+                    <a href="{{Route('application.scholarship')}}" class="card-title fw-bolder text-muted text-hover-primary fs-4">New Course Application with scholarship</a>
                     
                 </div>
                 <!--end::Body-->

@@ -8,11 +8,13 @@
     <div class="col-sm-12">
         <div class="col bg-success px-6 py-8 rounded-2 me-7 mb-7">
             <!--begin::Svg Icon | path: icons/stockholm/Media/Equalizer.svg-->
-            <h1>Notification</h1>
             
+            <h1>Good day {{Auth::user()->firstname}} {{Auth::user()->middlename}} {{Auth::user()->surname}}. Below are your latest notifications</h1>
+
             @foreach ($notifications as $item)
+
             <!--end::Svg Icon-->
-            <h4 class="text-warning fw-bold fs-6">{{$item->text}}</h4>
+            <h4 >{{$item->updated_at}}: {{$item->text}}</h4>
             @endforeach
         </div>
     </div>
@@ -35,7 +37,7 @@
                     </svg>
                 </span>
                 <!--end::Svg Icon-->
-                <a href="{{Route('newapplication')}}" class="text-warning fw-bold fs-6">New Application</a>
+                <a href="{{Route('newapplication')}}" class="text-warning fw-bold fs-6">New Course Registration</a>
             </div>
             <!--end::Mixed Widget 2-->
         </div>
@@ -55,7 +57,7 @@
                     </svg>
                 </span>
                 <!--end::Svg Icon-->
-                <a href="{{Route('applications')}}" class="text-warning fw-bold fs-6">Application Status</a>
+                <a href="{{Route('applications')}}" class="text-warning fw-bold fs-6">Admission Application Status</a>
             </div>
             <!--end::Mixed Widget 2-->
         </div>
@@ -127,7 +129,12 @@
         </div>
         <!--end::Col-->
           <!--begin::Col-->
-         
+         <table >
+
+    <td valign="middle" align="center"> <h1 class="text-dark mb-3">Application Tutorial</h1> <iframe width="100%" height="315" src="https://www.youtube.com/embed/qMtkC3dc9dY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            </td>
+
+</table>
         
     </div>
     <x-slot name="script">

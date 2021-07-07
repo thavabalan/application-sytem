@@ -15,7 +15,7 @@
                 <div class="card-header">
                     <!--begin::Card title-->
                     <div class="card-title">
-                        <h2 class="fw-bolder">Scholarship</h2>
+                        <h2 class="fw-bolder">New Admission Registraiton with Scholarship</h2>
                     </div>
                     <!--begin::Card title-->
                     <!--begin::Card toolbar-->
@@ -33,11 +33,12 @@
                             <!--begin::Table head-->
                             <thead>
                                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0" role="row">
-                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Scholarship Title</th>
+                                   <th class="min-w-100px  sorting_disabled" rowspan="1" colspan="1">Action </th>
+                                    
+                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Scholarship Category</th>
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Opening Date</th>
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Closing Date</th>
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Eligibility Requirement</th>
-                                    <th class="min-w-100px  sorting_disabled" rowspan="1" colspan="1">Action </th>
                                     
                                 </tr>
                             </thead>
@@ -47,12 +48,13 @@
                                 
                                 @foreach ($scholarships as $item)
                                     <tr>
+                                        
+                                        <td><a href="{{route('scholarship.single',$item->id)}}" class="btn btn-sm btn-light btn-active-light-primary" >Select</a>
+                                        </td>
                                         <td>{{$item->title}}</td>
                                         <td>{{$item->opening_date}}</td>
                                         <td>{{$item->closing_date}}</td>
                                         <td>{{$item->elegibility}}</td>
-                                        <td><a href="{{route('scholarship.single',$item->id)}}" class="btn btn-sm btn-light btn-active-light-primary" >Select</a>
-                                        </td>
                                     </tr>
                                 @endforeach
                                 

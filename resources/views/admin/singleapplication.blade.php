@@ -89,6 +89,8 @@
                                         <button type="button" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">
                                             Upload file
                                         </button>
+                                    
+                                        
                                         <!--end::Menu-->
                                     </div>
                                     <!--end::Actions-->
@@ -138,6 +140,7 @@
                                                 <!--end::Label-->
                                             </div>
                                             <!--end::Stat-->
+                                            
                                             <!--begin::Stat-->
                                            
                                             <!--end::Stat-->
@@ -243,7 +246,7 @@
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">
-                                <a href="#" class="fw-bold fs-6 text-dark text-hover-primary">{{$application->user->mobilenumber}}</a>
+                                <a href="#" class="fw-bold fs-6 text-dark text-hover-primary">{{$application->user->email}}</a>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -534,8 +537,10 @@
                         <!--begin::Title-->
                         <div class="card-title">
                             <h3 class="fw-bolder m-0">Uploaded Files</h3>
+                            
                         </div>
                         <!--end::Title-->
+                        
                         <!--begin::Toolbar-->
                         
                         <!--end::Toolbar-->

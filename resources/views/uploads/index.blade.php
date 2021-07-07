@@ -13,7 +13,7 @@
                     <h3 class="card-title">Files</h3>
                     <div class="card-toolbar">
                         <button type="button" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">
-                            Upload file
+                            Upload Any Additional file
                         </button>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">JAMB
+                <h3 class="card-title">JAMB (if Available)
                 </h3>
 
             </div>
@@ -184,7 +184,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title"> Any ID (Passport/Driving Licence etc)
+                <h3 class="card-title"> Any National ID
                 </h3>
 
             </div>
