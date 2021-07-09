@@ -2,29 +2,7 @@
 @section('content')
 
 
-<!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v10.0'
-          });
-        };
 
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your Chat Plugin code -->
-      <div class="fb-customerchat"
-        attribution="setup_tool"
-        page_id="121463063021741">
-      </div>
     
 <div class="d-flex flex-column flex-root">
     <!--begin::Authentication - Sign-in -->
@@ -39,7 +17,7 @@
                 </a>
                 <!--end::Logo-->
                 <!--begin::Title-->
-                <h1 class="fw-bolder fs-2qx pb-5 pb-md-10" >Welcome To MIU Central Admissions & Scholarships Portal</h1>
+                <h1 class="fw-bolder fs-2qx pb-5 pb-md-10" >Welcome To MIU Nigeria's Central Admissions & Scholarships Portal</h1>
                 <!--end::Title-->
                 <!--begin::Description-->
                 <p class="fw-bold fs-2" style="color: #986923;">Don't Have an Account
@@ -52,9 +30,21 @@
             </div>
             <!--end::Header-->
             <!--begin::Illustration-->
+            
             <!--end::Illustration-->
         </div>
+         
+
+
+  
+        
         <!--begin::Aside-->
+      <table >
+
+    <td valign="middle" align="center"> <h1 class="text-dark mb-3">Application Tutorial</h1> <iframe width="100%" height="315" src="https://www.youtube.com/embed/qMtkC3dc9dY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            </td>
+
+</table>
         <!--begin::Body-->
         <div class="d-flex flex-column flex-lg-row-fluid py-10">
             <!--begin::Content-->
@@ -110,6 +100,8 @@
                                 <span class="indicator-progress">Please wait...
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
+                         
+                            
                             <!--end::Submit button-->
                             <!--begin::Google link-->
                             <!--end::Google link-->

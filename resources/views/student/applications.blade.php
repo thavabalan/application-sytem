@@ -30,7 +30,7 @@ $split = [
                 <div class="card-header">
                     <!--begin::Card title-->
                     <div class="card-title">
-                        <h2 class="fw-bolder">Your Applications</h2>
+                        <h2 class="fw-bolder">Your Submitted Applications</h2>
                     </div>
                     <!--begin::Card title-->
                     <!--begin::Card toolbar-->
@@ -49,10 +49,11 @@ $split = [
                             <thead>
                                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0" role="row">
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Course Name</th>
-                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Scholarship</th>
+                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Scholarship Category</th>
+                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Submission Date</th>
                                     
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Status </th>
-                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Print </th>
+                                    <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Print Application</th>
                                     
                                 </tr>
                             </thead>
@@ -64,6 +65,7 @@ $split = [
                                     <tr>
                                         <td>{{$item->course->degree_in_view}} {{$item->course->title}}</td>
                                         <td>{{$item->scholarship->title}}</td>
+                                        <td>{{$item->updated_at}}</td>
                                         <td>
                                             @if($item->status === 'Submitted')
                                             <span class="badge badge-light-primary fs-8 fw-bolder">Submitted</span>
