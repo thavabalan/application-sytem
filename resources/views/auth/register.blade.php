@@ -292,7 +292,7 @@
                                 <!--begin::Heading-->
                                 <div class="pb-10 pb-lg-15">
                                     <!--begin::Title-->
-                                    <h2 class="fw-bolder text-dark">Passport</h2>
+                                    <h2 class="fw-bolder text-dark">Passport Size Photo (below 1 mb)</h2>
                                     <!--end::Title-->
                                     <!--begin::Notice-->
                                     <div class="text-gray-400 fw-bold fs-6">Upload your Passport size photo
@@ -303,8 +303,8 @@
                                 <!--begin::Input group-->
                                 <div class="mb-10 fv-row">
                                     <!--begin::Label-->
-                                    <label class="d-flex align-items-center form-label mb-3">Passport size photo
-                                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Provide your team size to help us setup your billing"></i></label>
+                                    <label class="d-flex align-items-center form-label mb-3">Passport size photo (JPEG or JPG only) BELOW 1 MB
+                                    <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Provide your passport size photo"></i></label>
                                     <!--end::Label-->
                                     <!--begin::Row-->
                                     <div class="row mb-2" data-kt-buttons="true">
@@ -323,7 +323,7 @@
                                     </div>
                                     <!--end::Row-->
                                     <!--begin::Hint-->
-                                    <div class="form-text">Customers will see this shortened version of your statement descriptor</div>
+                                    <div class="form-text">UPLOAD ONLY JPEG/JPG FORMAT BELOW 1 MB</div>
                                     <!--end::Hint-->
                                 </div>
                                 <!--end::Input group-->
@@ -374,9 +374,9 @@
                                             <label class="form-label fw-bolder text-dark fs-6">Is Hostel required</label>
                                             <select name="is_hotel" class="form-select form-select-lg form-select-solid" data-control="select2" data-placeholder="Select..." data-allow-clear="true" >
                                                 <option value="">Select Application Type</option>                                            
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                                <option value="0">Maybe required</option>
+                                                <option value="Yes">Yes </option>
+                                                <option value="No">No</option>
+                                                <option value="Maybe">Maybe required</option>
 
                                                 
                                             </select>

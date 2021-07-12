@@ -22,6 +22,7 @@
                         <th>Course Preference</th>
                         <th>Status</th>
                         <th>Action</th>
+                        <th>Print</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,9 +47,11 @@
                         <td>
                             <a href="{{route('admin.applications.show',$item->id)}}" class="menu-link px-3">View</a>
                         </td>
+                        <td><a href="{{'applicationprint',$item->id}}" class="menu-link px-3">Print</a>  </td>
                     </tr>
+                    
                 @endforeach
-                   
+                    
                     
                 </tbody>
                 
