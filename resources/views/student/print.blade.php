@@ -1,141 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<style>
-    .container1{
-        
-        border: 1px solid;
-        border-color:black;
-    }
-    .container1 h1{
-        text-align: center;
-        font-size: 15px;
-        background-color: orange;
-    }
+<style type="text/css">
+<!--
+body {
+	font-size:12px;
+	font-family:Arial;
+}
+-->
 </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <img src=" {{$application->course->profile}}" width="150px" height="180px">
-            </div>
-            <div class="col text-center">
-               <h2>MEWAR INTERNATIONAL UNIVERSITY</h2>
-               <h4>FIRST INDIAN UNIVERSITY IN AFRICA</h4> 
-               <p>Approved under fulfilment of education Act, Cap E3 Laws of Federal Republic of Nigeria 2004 Accredited by the National University Commission (NUC), Ministry of Education, Nigeria</p>
-                <h6>KM 21, Abuja-Keffi Expressway, Masaka, Karu, Nasarawa State Federal Republic of Nigeria</h6>
-                <p>Website: www.miu.edu.ng
-Facebook: fb.com/mewaruniversitynigeria
-Tel: +2348183012911
-E-mail: admission@miu.edu.ng</p>
-            </div>
-            <div class="col">
-                <img src="https://admissionform.miu.edu.ng/assets/media/miulogo.png" alt="" width="150px" height="180px">
-            </div>
-        </div>
-        <div class="container1">
-            <div class="row">
-                <div class="col-sm-12">
-                <h1>Program Details*
-                </h1>
-                <div class="col-sm-4">Preferred Course of Study: </div>
-                {{$application->course->title}}
-                <p>JAMB Registration Number (if available):{{$application->user->jamb_no}} Year:{{$application->user->jamb_year}} Score:{{$application->user->jamb_sub1score}}
-                </p>
-            </div>
-            </div>
-        </div>
-        <div class="container1">
-            <div class="row">
-                <div class="col-sm-12">
-                <h1>Personal Details*
-                </h1>
-                <p>Full Name: {{$application->user->fistname}} {{$application->user->middlename}} {{$application->user->surname}}<p>
-                <p>Gender:{{$application->user->gender}}   Date of Birth:{{$application->user->dob}}
-                </p>
-                <p>Nationality:{{$application->user->nationality}} State of Origin:{{$application->user->state}} LGA:{{$application->user->lga}}</p>
-                <p>Permanent Home Address:{{$application->user->address}}
-                    </p>
-                    <p>Phone Number:{{$application->user->mobilenumber}} E-mail:{{$application->user->email}}
-                    </p>
-                    <p>Blood Group:___________________ Disability:_________________________________________________________</p>
-                </div>
-                </div>
-        </div>
-        <div class="container1">
-            <div class="row">
-                <div class="col-sm-12">
-                <h1>Academic History*
-                </h1>
-                @foreach($application->user->exams as $item)
-                                                        <p>Qualification Obtained:{{$item->exam_type}}</p>
-                                                        <p> School Name:{{$item->exam_center}}</p>
-                                                        <p>SSCE Registration Number (WAEC/NECO/Other):{{$item->reg_no}}</p>
-                                                        <p>Year:{{$item->exam_year}}</p>
-            @endforeach
-                </div> </div>
-        </div>
-        <div class="container1">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h1>SSCE Subjects & Grade 
+<table style="background:#ec7d30;width:100%;margin:10px;border-collapse:collapse;font-family:Arial;">
+<tr>
+<td style="font-size: 12px;">
 
-                    </h1>
-                    @foreach($application->user->exams as $item)
-                    @foreach($item->results as $item)
-                    <p>1. {{$item->subject}} Language Grade {{$item->grade}}</p>
-                    @endforeach
-                    @endforeach
-                </div>
-                <div class="col-sm-6">
-                    <h1>Next of Kin*
-                    </h1>
-                    <p>Name:___________________________________________
-                    </p>
-                    <p>Address:_________________________________________
-                        ________________________________________________</p>
-                    <p>Phone Number:___________________________________
-                        </p>
-                        <p>
-                            E-mail:__________________________________________
+<table style="width:100%;background:#ec7d30;text-align:center;vertical-align:middle;border-collapse:collapse;">
+	<tr>
+		<td style="text-align:center;vertical-align:middle;font-size: 14px;font-weight: bold;">Why go abroad when abroad is here</td>
+	</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:0 20px;border-top: 1px solid;border-bottom: 1px solid;">
+<table style="width:100%;background:#fff;vertical-align:middle;border-collapse:collapse;border:1px solid #000;">
+	<tr>
+		<td style="vertical-align:middle;width: 15%;border: 1px solid;text-align:center;"><img src="https://admissionform.miu.edu.ng/assets/media/miu%20logo.png" width="100%"></td>
+		<td style="text-align:center;vertical-align:middle;border:1px solid #000;">
+			<h1 style="color:#ec7d30;font-size: 15.5px;margin: 0;font-style: italic;">MEWAR INTERNATIONAL UNIVERSITY</h1>
+			<h5  style="color:#ec7d30;font-size: 13px;margin: 0;font-style: normal;font-weight: normal;">FIRST INDIAN UNIVERSITY IN AFRICA</h5>
+			<p  style="color:blue;font-size: 10px;">Approved under of education Act, Cap E3 Laws of Federal Republic of Nigeria 2004</br>
+Accredited by the National University Commission (NUC), Ministry of Education, Nigeria</p>
+		</td>
+		<td style="vertical-align:middle;width: 20%;border: 1px solid;text-align:center;" rowspan="3"><img src="https://admissionform.miu.edu.ng{{$application->user->profile}}" width="100%" /></td>
+	</tr>
+	<tr>
+		<td style="text-align:center;vertical-align:middle;padding-left: 10px;font-size: 13px;padding-top: 6px;font-weight: bold;" colspan="2">KM 21, Expressway, Masaka, Karu, Nasarawa State Federal Republic of Nigeria</td>
+	</tr>
+	<tr>
+		<td style="text-align:center;vertical-align:middle;color:#ec7d30;font-size: 12px;padding-top: 6px;padding-left: 10px;" colspan="2">Website: <a href="www.miu.edu.ng" style=" color:#000;">www.miu.edu.ng</a> Tel: <span style="color:#000;">+2348183012911.</span> Email: <a href="mailto:admission@miu.edu.ng; " style="color:#000;">admission@miu.edu.ng</a></td>
+	</tr>
+</table>
+<table style="width:100%;text-align:center;border-collapse:collapse;">
+	<tr>
+		<td style="background:#000;color:#fff;vertical-align:middle;"><h3 style="margin:0;padding:7px;font-size: 13.5px;">APPLICATION FORM</h3></td>
+	</tr>
+</table>
+<table style="width:100%;border-collapse:collapse;">
+	<tr>
+		<td style="background:#ec7d30;vertical-align:middle;width:40%;border:1px solid #000;padding-left: 10px;border-top: none;font-weight:bold;">Personal Details</td>
+		<td style="border:1px solid #000;background:#fff;"></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Full Name: {{$application->user->fistname}} {{$application->user->middlename}} {{$application->user->surname}}</td>
+		
+	</tr>
+	<tr>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Gender: {{$application->user->gender}}</td>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Date of Birth: {{$application->user->gender}}</td>
+		
+	</tr>
+	<tr>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Nationality: {{$application->user->nationality}}:</td>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">State of Origin: {{$application->user->state}}</td>
+		
+	</tr>
+	<tr>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Phone Number: {{$application->user->mobilenumber}}</td>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Email Address:{{$application->user->email}}</td>
+		
+	</tr>
+	<tr>
+		<td colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Permanent Home Address:{{$application->user->address}}</td>
+		
+	</tr>
+	<tr>
+		<td colspan="3" style="background:#fff;vertical-align:middle;border:1px solid #000;padding:9px;"></td>
+		
+	</tr>
+</table>
+<table style="width:100%;border-collapse:collapse;">
+	
+	<tr>
+		<td style="background:#ec7d30;vertical-align:middle;width:40%;border:1px solid #000;padding-left: 10px;border-top: none;font-weight:bold;">Academic History</td>
+		<td style="border-right:1px solid #000;background:#fff;" colspan="2"></td>		
+	</tr>
+	<tr>
+		<td  style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">JAMB Registration Number: {{$application->user->jamb_no}}</td>
+		<td  style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">JAMB Year: {{$application->user->jamb_year}}</td>
+		<td  style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">JAMB Score: {{$application->user->jamb_sub1score}}</td>
+		
+	</tr>
+	@foreach($application->user->exams as $item)
+	<tr>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">School Name: {{$item->exam_center}}</td>
+		<td colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">SSCE Type:{{$item->exam_type}}</td>
+		
+	</tr>
+	<tr>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Registration Number: {{$item->reg_no}}</td>
+		<td  colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Year of Exam: {{$item->exam_year}}</td>
+		
+	</tr>
+	@endforeach
+	<tr>
+		<td style="background:#fff;vertical-align:top;border:1px solid #000;padding-left: 10px;">SSCE Subject and Grades: </td>
+		<td colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">			
+			@foreach($application->user->exams as $item)
+				@foreach($item->results as $item)
+					<p>{{$item->subject}} Language Grade {{$item->grade}}</p>
+				@endforeach
+			@endforeach
+		</td>		
+	</tr>
+	<tr>
+		<td colspan="3" style="background:#fff;vertical-align:middle;border:1px solid #000;padding:9px;"></td>
+		
+	</tr>
+</table>
 
-                        </p>
-                </div>
-            </div>
-        </div>
-        <div class="container1">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h1>Facility Preference </h1>
-                    <p>Hoste: {{$application->user->is_hotel}}</p>
-                </div>
-                <div class="col-sm-4">
-                    <h1> Payment Plan
-                    </h1>
-                    <p>Full Payment Annually
-                    </p>
-                    <p>Full Payment Annually</p>
-                    <p>Four installments annually
+<table style="width:100%;border-collapse:collapse;">
+	<tr>
+		<td style="background:#ec7d30;vertical-align:middle;width:40%;border:1px solid #000;padding-left: 10px;    border-top: none;font-weight:bold;">Guardian Details</td>
+		<td style="border-right:1px solid #000;background:#fff;"></td>
+	</tr>
+	<tr>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Full name: {{$application->user->guardian_fistname}} {{$application->user->guardian_middlename}} {{$application->user->guardian_surname}}</td>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Gender: {{$application->user->guardian_gender}}</td>
+	</tr>
+	<tr>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Mobile:{{$application->user->guardian_mobile}}</td>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Email: {{$application->user->guardian_email}}</td>
+		
+	</tr>
+	<tr>
+		<td colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Permanent Home Address: {{$application->user->guardian_contact}}</td>
+		
+	</tr>
+	<tr>
+		<td colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding:9px;"></td>
+		
+	</tr>
+</table>
+<table style="width:100%;border-collapse:collapse;">
+	<tr>
+		<td style="background:#ec7d30;vertical-align:middle;width:40%;border:1px solid #000;padding-left: 10px;    border-top: none;font-weight:bold;">Admission Application Details</td>
+		<td style="border-right:1px solid #000;background:#fff;"></td>
+	</tr>
+	<tr>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Scholarship Category: {{$application->scholarship->title}}</td>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Admission Category:{{$application->user->admission_type}}</td>
+	</tr>
+	<tr>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Hostel Requirement: {{$application->user->is_hotel}}</td>
+		<td style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Application Status:{{$application->status}}</td>
+		
+	</tr>
+	<tr>
+		<td colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;">Program Preference: {{$application->course->title}}</td>
+		
+	</tr>
+	<tr>
+		<td colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding:9px;"></td>
+		
+	</tr>
+</table>
+<table style="width:100%;text-align:center;background:#fff;border-collapse:collapse;">
+	<tr>
+		<td colspan="2" style="background:#000;color:#fff;vertical-align:middle;"><h3 style="margin:0;padding:7px;font-size: 13.5px;">INDEMNIFICATION & VERIFICATION</h3></td>
+	</tr>
+	<tr>
+		<td colspan="2"  style="border:1px solid #000; text-align:left;padding:5px 10px;">I do hereby verify that my submitted application form is true to my knowledge and if I am offered an admission at this esteemed Mewar University Nigeria then I shall abide to all the rules and regulations prescribed by the University. If at a later phase I am found to have submitted false information the University has rights to take action against me anytime.</td>
+	</tr>
+	<tr>
+		<td style="border:1px solid #000;height:100px;vertical-align:bottom;">Signature of Student</td>
+		<td style="border:1px solid #000;vertical-align:bottom;">Signature of Guardian</td>
+	</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="font-size: 12px;">
 
-                        </p>
-                      
-                </div>
-                <div class="col-sm-4">
-                    <h1>Program type
-                    </h1>
-                    <p>Full Time
-                    </p>
-                    <p>Part Time</p>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+<table style="width:100%;background:#ec7d30;text-align:center;vertical-align:middle;border-collapse:collapse;">
+	<tr>
+		<td style="text-align:center;vertical-align:middle;padding:10px;"></td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
 </body>
 </html>
