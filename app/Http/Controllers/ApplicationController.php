@@ -59,7 +59,7 @@ class ApplicationController extends Controller
         Session::put("purchase",$id);
 
         
-        return Redirect::to('https://paystack.com/pay/thushapan');
+        return Redirect::to('https://paystack.com/pay/miuadmission');
        
     }
 
