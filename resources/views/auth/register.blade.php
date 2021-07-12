@@ -374,9 +374,9 @@
                                             <label class="form-label fw-bolder text-dark fs-6">Is Hostel required</label>
                                             <select name="is_hotel" class="form-select form-select-lg form-select-solid" data-control="select2" data-placeholder="Select..." data-allow-clear="true" >
                                                 <option value="">Select Application Type</option>                                            
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                                <option value="0">Maybe required</option>
+                                                <option value="Yes">Yes </option>
+                                                <option value="No">No</option>
+                                                <option value="Maybe">Maybe required</option>
 
                                                 
                                             </select>
