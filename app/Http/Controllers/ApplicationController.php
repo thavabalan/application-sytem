@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Scholarship;
 use App\Models\Course;
 use App\Models\Application;
@@ -12,6 +11,10 @@ use App\Models\Subject;
 use App\Models\Notification;
 use Illuminate\Support\Facades\Auth;
 use File;
+use Request;
+use Session;
+use Illuminate\Support\Facades\Redirect;
+
 use PDF;
 
 class ApplicationController extends Controller
@@ -34,6 +37,30 @@ class ApplicationController extends Controller
         $courses = Course::all();
 
         return view('student.course',['courses'=>$courses,'scholarship' => $scholarship]);
+    }
+
+    public function paid(){
+
+        $reference = Request::input('reference');
+
+        $purchase_id = Session::get('purchase');
+
+        $application = Application::find($purchase_id);
+        $application->payment = 1;
+        $application->save();
+        Session::forget('purchase');
+
+        return redirect()->route('applications');
+
+        }
+
+    public function payment($id){
+
+        Session::put("purchase",$id);
+
+        
+        return Redirect::to('https://paystack.com/pay/thushapan');
+       
     }
 
     public function applications(){

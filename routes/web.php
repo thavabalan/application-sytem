@@ -74,6 +74,10 @@ Route::get('/admin/course/application/{id}',[ApplicationController::class,'cours
 Route::post('/pay', [PaymentController::class, 'redirectToGateway'])->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
+Route::get('/payment/{id}',[ApplicationController::class,'payment'])->middleware('applicant')->name('payment'); 
+
+Route::get('/studentapplications/paid',[ApplicationController::class,'paid'])->middleware('applicant')->name('paid'); 
+
 Route::get('/studentapplications',[ApplicationController::class,'applications'])->middleware('applicant')->name('applications'); 
 Route::get('/studentapplication/{id}',[ApplicationController::class,'printapplication'])->middleware('applicant')->name('applicationsprint'); 
 Route::get('/studentnotification',[ApplicationController::class,'studentnotification'])->middleware('applicant')->name('studentnotification');

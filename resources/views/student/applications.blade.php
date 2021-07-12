@@ -8,17 +8,17 @@
     <?php
 // more details https://paystack.com/docs/payments/multi-split-payments/#dynamic-splits
 
-// $split = [
-//    "type" => "percentage",
-//    "currency" => "KES",
-//    "subaccounts" => [
-//     [ "subaccount" => "ACCT_pwwualwty4nhq9d", "share" => 10 ],
-//     [ "subaccount" => "ACCT_pwwualwty4nhq9d", "share" => 30 ],
-//    ],
-//    "bearer_type" => "all",
-//    "main_account_share" => 70
-// ];
-// ?>
+$split = [
+   "type" => "percentage",
+   "currency" => "KES",
+   "subaccounts" => [
+    [ "subaccount" => "ACCT_li4p6kte2dolodo", "share" => 10 ],
+    [ "subaccount" => "ACCT_li4p6kte2dolodo", "share" => 30 ],
+   ],
+   "bearer_type" => "all",
+   "main_account_share" => 70
+];
+?>
 
     <div class="row gy-5 g-xl-8">
         <!--begin::Col-->
@@ -86,14 +86,15 @@
             <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
             
           
-            {{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}} 
-
+            <input type="hidden" name="split_code" value="SPL_EgunGUnBeCareful"> {{-- to support transaction split. more details https://paystack.com/docs/payments/multi-split-payments/#using-transaction-splits-with-payments --}}
+            <input type="hidden" name="split" value="{{ json_encode($split) }}"> {{-- to support dynamic transaction split. More details https://paystack.com/docs/payments/multi-split-payments/#dynamic-splits --}}
+            {{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
             <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
 
             <p>
             <span class="badge badge-light-success fs-8 fw-bolder">Accepted</span>
 
-                <a class="btn btn-success btn-sm btn-block" href="https://paystack.com/pay/as" value="Pay Now!">
+                <a class="btn btn-success btn-sm btn-block"  href="/payment/{{$item->id}}" >
                     <i class="fa fa-plus-circle fa-lg"></i> Pay Now!
 </a>
             </p>
