@@ -11,9 +11,11 @@ use App\Models\Subject;
 use App\Models\Notification;
 use Illuminate\Support\Facades\Auth;
 use File;
-use Request;
+
 use Session;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Http\Request; 
+
 
 use PDF;
 
@@ -39,9 +41,9 @@ class ApplicationController extends Controller
         return view('student.course',['courses'=>$courses,'scholarship' => $scholarship]);
     }
 
-    public function paid(){
+    public function paid(Request $request){
 
-        $reference = Request::input('reference');
+        $reference = $request->input('reference');
 
         $purchase_id = Session::get('purchase');
 

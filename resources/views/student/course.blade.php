@@ -32,12 +32,14 @@
                             <table class="table align-middle table-row-dashed fs-6 fw-bold gy-4 dataTable no-footer" id="kt_subscription_products_table" role="grid">
                             <!--begin::Table head-->
                             <thead>
+                             
                                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0" role="row">
+                                <th class="min-w-100px  sorting_disabled" rowspan="1" colspan="1">Action </th>
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Course Name</th>
                                  
                                    
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1"> Eligibility criteria</th>
-                                    <th class="min-w-100px  sorting_disabled" rowspan="1" colspan="1">Action </th>
+                                   
                                     
                                 </tr>
                             </thead>
@@ -47,11 +49,12 @@
                                 
                                 @foreach ($courses as $item)
                                     <tr>
+                                    <td><a href="{{route('scholarship.apply',['scholarid'=>$scholarship->id,'courseid'=>$item->id])}}" class="btn btn-sm btn-light btn-active-light-primary" >Apply</a>
+                                        </td>
                                         <td>{{$item->degree_in_view}} {{$item->title}}<br/>@ <br/>{{$item->department}}</td>
                                       
                                         <td>{{$item->elegibility_criteria}}</td>
-                                        <td><a href="{{route('scholarship.apply',['scholarid'=>$scholarship->id,'courseid'=>$item->id])}}" class="btn btn-sm btn-light btn-active-light-primary" >Select</a>
-                                        </td>
+                                        
                                     </tr>
                                 @endforeach
                                 

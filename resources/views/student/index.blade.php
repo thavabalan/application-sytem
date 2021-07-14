@@ -9,12 +9,11 @@
         <div class="col bg-success px-6 py-8 rounded-2 me-7 mb-7">
             <!--begin::Svg Icon | path: icons/stockholm/Media/Equalizer.svg-->
             
-            <h1>Good day {{Auth::user()->firstname}} {{Auth::user()->middlename}} {{Auth::user()->surname}}. Below are your latest notifications</h1>
-
+            <h5>Good day {{Auth::user()->firstname}} {{Auth::user()->middlename}} {{Auth::user()->surname}}. <br/> Please click new course Registration to do course selection submission. <br/> Below are your latest notifications</h5>
             @foreach ($notifications as $item)
 
             <!--end::Svg Icon-->
-            <h4 >{{$item->updated_at}}: {{$item->text}}</h4>
+            <h5>{{$item->updated_at}}: {{$item->text}}</h5>
             @endforeach
         </div>
     </div>
@@ -23,21 +22,22 @@
         <!--begin::Col-->
         <div class="col-xxl-6">
             <!--begin::Mixed Widget 2-->
-            <div class="col bg-light-info px-6 py-8 rounded-2 me-7 mb-7">
+            <div class="col bg-light-success px-6 py-8 rounded-2 me-7 mb-7">
                 <!--begin::Svg Icon | path: icons/stockholm/Media/Equalizer.svg-->
                 <span class="svg-icon svg-icon-3x svg-icon-warning d-block my-2">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <rect x="0" y="0" width="24" height="24"></rect>
-                            <rect fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5"></rect>
-                            <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5"></rect>
-                            <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5"></rect>
-                            <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5"></rect>
+                            <rect fill="#750000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5"></rect>
+                            <rect fill="#750000" x="8" y="9" width="3" height="11" rx="1.5"></rect>
+                            <rect fill="#750000" x="18" y="11" width="3" height="9" rx="1.5"></rect>
+                            <rect fill="#750000" x="3" y="13" width="3" height="7" rx="1.5"></rect>
                         </g>
                     </svg>
                 </span>
                 <!--end::Svg Icon-->
-                <a href="{{Route('newapplication')}}" class="text-warning fw-bold fs-6">New Course Registration</a>
+                <a style="text-align:center;vertical-align:middle;font-size: 14px;color:black;" >  You have  ___ Course Registrations <br/></a>
+                <a href="{{Route('newapplication')}}" class="btn btn-sm btn-primary me-2" >New Course Registration</a>
             </div>
             <!--end::Mixed Widget 2-->
         </div>
@@ -57,7 +57,11 @@
                     </svg>
                 </span>
                 <!--end::Svg Icon-->
-                <a href="{{Route('applications')}}" class="text-warning fw-bold fs-6">Admission Application Status</a>
+              <a style="text-align:center;vertical-align:middle;font-size: 14px;color:black;" >
+              
+                You have ___ Approved & ___ Rejected Applications<br/>
+                </a>
+                <a href="{{Route('applications')}}" class="btn btn-sm btn-primary me-2" > View Detailed Status</a>
             </div>
             <!--end::Mixed Widget 2-->
         </div>
@@ -78,7 +82,7 @@
                     </svg>
                 </span>
                 <!--end::Svg Icon-->
-                <a href="{{Route('studentnotification')}}" class="text-warning fw-bold fs-6">Notification</a>
+                <a href="{{Route('studentnotification')}}" style="text-align:center;vertical-align:middle;font-size: 14px;font-weight: bold;color:blue;" >Notification</a>
             </div>
            
             <!--end::Mixed Widget 2-->
@@ -101,7 +105,7 @@
                     </svg>
                 </span>
                 <!--end::Svg Icon-->
-                <a href="{{Route('result')}}" class="text-warning fw-bold fs-6">My results</a>
+                <a href="{{Route('result')}}" style="text-align:center;vertical-align:middle;font-size: 14px;font-weight: bold;color:blue;" >My results</a>
             </div>
             <!--end::Mixed Widget 2-->
         </div>
@@ -123,7 +127,7 @@
                     </svg>
                 </span>
                 <!--end::Svg Icon-->
-                <a href="{{Route('upload')}}" class="text-warning fw-bold fs-6">My files</a>
+                <a href="{{Route('upload')}}" style="text-align:center;vertical-align:middle;font-size: 14px;font-weight: bold;color:blue;" >My files</a>
             </div>
             <!--end::Mixed Widget 2-->
         </div>

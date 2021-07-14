@@ -274,7 +274,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end text-end">
-                <a href="{{route('application.index')}}" class="btn btn-sm btn-primary" >
+                <a href="{{Route('newapplication')}}" class="btn btn-sm btn-primary" >
                     
                     Countinue to submit application
                    

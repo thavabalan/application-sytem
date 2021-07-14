@@ -80,6 +80,7 @@ Route::get('/studentapplications/paid',[ApplicationController::class,'paid'])->m
 
 Route::get('/studentapplications',[ApplicationController::class,'applications'])->middleware('applicant')->name('applications'); 
 Route::get('/studentapplication/{id}',[ApplicationController::class,'printapplication'])->middleware('applicant')->name('applicationsprint'); 
+Route::get('/adminapplication/{id}',[ApplicationController::class,'printapplication'])->middleware('admin')->name('adminprint'); 
 Route::get('/studentnotification',[ApplicationController::class,'studentnotification'])->middleware('applicant')->name('studentnotification');
 Route::get('/application',[ApplicationController::class,'index'])->middleware('applicant')->name('application.index');
 Route::get('/offerletter',[ApplicationController::class,'offerletter'])->middleware('applicant')->name('application.offerletter');

@@ -31,7 +31,7 @@ $split = [
                     <!--begin::Card title-->
                     <div class="card-title">
                         <p><h2 class="fw-bolder">Your Submitted Applications</h2></p>
-                        <br><h5>  Scroll Right to see more ----></h5>
+                        <br><h5>&ensp; Scroll Right to see more ----></h5>
                     </div>
                     <!--begin::Card title-->
                   
@@ -51,7 +51,7 @@ $split = [
                             <thead>
                                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0" role="row">
                                 
-                                 <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Print <br>Form</th>
+                                 
                                 <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1">Application Status </th>
                                     <th class="min-w-100px sorting_disabled" rowspan="1" colspan="1" >Course Name</th>
                                     
@@ -72,53 +72,43 @@ $split = [
                                 
                                 @foreach ($applications as $item)
                                     <tr>
-                                    
-                                    <td><a href="{{route('applicationsprint',$item->id)}}">Print</a>  </td>
+                               
+                               
                                         <td>
+                                        <span class="badge badge-light-primary fs-8 fw-bolder">     Ref ID: MIUTEMP{{$item->user->id}}-{{$item->id}}</span><br/>
                                             @if($item->status === 'Submitted')
-                                            <span class="badge badge-light-primary fs-8 fw-bolder">Submitted</span>
+                                            <span class="badge badge-light-primary fs-8 fw-bolder">Status: Submitted</span>
                                             @elseif($item->status === 'Processing')
-                                            <span class="badge badge-light-warning fs-8 fw-bolder">Processing</span>
+                                            <span class="badge badge-light-warning fs-8 fw-bolder">Status: Processing</span>
                                             @elseif($item->status === 'Approved')
                                             @if($item->payment == null)
     <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="" role="form">
     <div >
         <div class="">
-            
-            <input type="hidden" name="email" value="thushapan1996@gmail.com"> {{-- required --}}
-            <input type="hidden" name="orderID" value="102324">
-            <input type="hidden" name="amount" value="800"> {{-- required in kobo --}}
-            <input type="hidden" name="quantity" value="1">
-            <input type="hidden" name="currency" value="NGN">
-            <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
-            <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
-            
           
-            <input type="hidden" name="split_code" value="SPL_EgunGUnBeCareful"> {{-- to support transaction split. more details https://paystack.com/docs/payments/multi-split-payments/#using-transaction-splits-with-payments --}}
-            <input type="hidden" name="split" value="{{ json_encode($split) }}"> {{-- to support dynamic transaction split. More details https://paystack.com/docs/payments/multi-split-payments/#dynamic-splits --}}
-            {{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
-            <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
 
             <p>
-            <span class="badge badge-light-success fs-8 fw-bolder">Accepted</span>
+            <span class="badge badge-light-success fs-8 fw-bolder">Admission Approved. Form fee Due</span><br/>
 
-                <a class="btn btn-success btn-sm btn-block"  href="/payment/{{$item->id}}" >
-                    <i class="fa fa-plus-circle fa-lg"></i> Pay Now!
+                <a class="btn btn-sm btn-danger me-3"  href="/payment/{{$item->id}}" >
+               Pay Admission Fee
 </a>
             </p>
         </div>
     </div>
 </form>
                                             @else
-                                            <span class="badge badge-light-success fs-8 fw-bolder">Accepted</span>
+                                            <span class="badge badge-light-success fs-8 fw-bolder">Admission Form Fees Paid</span><br/>
 
-                                            <a href="{{$item->offer_letter}}" target="_blank" class="menu-link px-3">Your offerletter</a>
+                                            <a class="btn btn-success btn-sm btn-block" href="{{$item->offer_letter}}" target="_blank" class="menu-link px-3">Download letter</a>
 
                                             @endif
                                           
                                             @elseif($item->status === 'Rejected')
-                                            <span class="badge badge-light-danger fs-8 fw-bolder">Rejected</span>
+                                            <span class="badge badge-light-danger fs-8 fw-bolder">Status: Rejected</span>
                                             @endif
+                                            
+                                            <br/><a href="{{route('applicationsprint',$item->id)}}"class="btn btn-sm btn-primary me-2">Print Form</a><br/>
                                         </td>
                                       
                                         <td>{{$item->course->degree_in_view}} {{$item->course->title}}</td>

@@ -16,17 +16,20 @@
                             <tr class="fw-bold fs-6 text-muted">
                                 <th>Application ID</th>
                                 <th>Applicant</th>
+                                <th>Phone</th>
                                 <th>Scholarship Category</th>
                                 <th>Course Preference</th>
                                 <th>Status</th>
                                 <th>Action</th>
+                                <th>Print</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($applications as $item)
                             <tr>
-                                <td>{{$item->id}}</td>
+                                <td>MUTEMP{{$item->user->id}}-{{$item->id}}</td>
                                 <td>{{$item->user->firstname}}</td>
+                                <td>{{$item->user->mobilenumber}}</td>
                                 <td>{{$item->scholarship->title}}</td>
                                 <td>{{$item->course->title}}</td>
                                 <td>
@@ -40,10 +43,16 @@
                                     @elseif($item->status === 'Rejected')
                                     <span class="badge badge-light-danger fs-8 fw-bolder">Rejected</span>
                                     @endif
+                                    @if($item->payment == 1) <span class="badge badge-light-success fs-8 fw-bolder">and Paid</span> @else <span class="badge badge-light-danger fs-8 fw-bolder">But Not Paid</span> @endif
+                                    <br/>
+                                    @if($item->offer_letter == NULL) <span class="badge badge-light-danger fs-8 fw-bolder">No Letter</span> @else <a class="btn btn-success btn-sm btn-block" href="{{$item->offer_letter}}" target="_blank" class="menu-link px-3">Download letter</a> @endif
+                                   
+                                    
                                 </td>
                                 <td>
-                                    <a href="{{route('admin.applications.show',$item->id)}}" class="menu-link px-3">View</a>
+                                    <a href="{{route('admin.applications.show',$item->id)}}" class="btn btn-sm btn-primary me-2">View</a>
                                 </td>
+                                <td><a href="{{route('adminprint',$item->id)}}" class="btn btn-sm btn-primary me-2">Print</a>  </td>
                             </tr>
                         @endforeach
                            

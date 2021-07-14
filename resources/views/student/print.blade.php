@@ -147,7 +147,7 @@ body {
 			
 		</tr>
 		<tr>
-			<td colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding:9px;"><b>Form Fees Payment Status: </b></td>
+			<td colspan="2" style="background:#fff;vertical-align:middle;border:1px solid #000;padding-left: 10px;"><b>Form Fees Payment Status: @if($application->payment == 1) Paid @else Not Paid @endif </b></td>
 			
 		</tr>
 	</table>

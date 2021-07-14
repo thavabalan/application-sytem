@@ -48,7 +48,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">               Highschool (SSCE/UTME)
+                <h3 class="card-title">               Highschool (WAEC/NECO/SSCE/UTME)
                 </h3>
 
             </div>
@@ -82,7 +82,7 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">2nd Seat Highschool (SSCE/UTME)
+                <h3 class="card-title">2nd Seat (WAEC/NECO/SSCE/UTME)
                 </h3>
 
             </div>
@@ -285,21 +285,14 @@
                         <div class="d-flex flex-column mb-7 fv-row">
                             <!--begin::Label-->
                             <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
-                                <span class="required">Title</span>
+                                <span class="required">What is the extra document?</span>
                             </label>
                             <!--end::Label-->
                             <input type="text" class="form-control form-control-solid" placeholder="" name="title" value="" />
                         </div>
                         <!--end::Input group-->
                         <!--begin::Input group-->
-                        <div class="d-flex flex-column mb-7 fv-row">
-                            <!--begin::Label-->
-                            <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
-                                <span class="required">Description</span>
-                            </label>
-                            <!--end::Label-->
-                            <textarea class="form-control form-control-solid" placeholder="" name="description" value="" ></textarea>
-                        </div>
+         <input type="hidden" class="form-control form-control-solid" placeholder="" name="description" value="Additional Document" />
                         <!--end::Input group-->
                         <!--begin::Input group-->
                         <div class="d-flex flex-column mb-7 fv-row">
