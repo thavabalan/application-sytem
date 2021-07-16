@@ -36,7 +36,7 @@
                     </svg>
                 </span>
                 <!--end::Svg Icon-->
-                <a style="text-align:center;vertical-align:middle;font-size: 14px;color:black;" >  You have  ___ Course Registrations <br/></a>
+                <a style="text-align:center;vertical-align:middle;font-size: 14px;color:black;" >  You have  {{$application_count}} Submitted Applications <br/></a>
                 <a href="{{Route('newapplication')}}" class="btn btn-sm btn-primary me-2" >New Course Registration</a>
             </div>
             <!--end::Mixed Widget 2-->
@@ -59,7 +59,7 @@
                 <!--end::Svg Icon-->
               <a style="text-align:center;vertical-align:middle;font-size: 14px;color:black;" >
               
-                You have ___ Approved & ___ Rejected Applications<br/>
+                You have {{$approved_count}} Approved & {{$rejected_count}} Rejected Applications<br/>
                 </a>
                 <a href="{{Route('applications')}}" class="btn btn-sm btn-primary me-2" > View Detailed Status</a>
             </div>

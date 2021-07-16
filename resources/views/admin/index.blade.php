@@ -66,7 +66,7 @@
             </span>
             <!--end::Svg Icon-->
             <h1>{{$pending_count}}</h1>
-            <a href="#" class="text-warning fw-bold fs-6">Peding Applications</a>
+            <a href="#" class="text-warning fw-bold fs-6">Pending Approval Applications</a>
         </div>
         <!--end::Mixed Widget 10-->
     </div>

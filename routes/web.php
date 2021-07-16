@@ -56,6 +56,8 @@ Route::get('/admin/approved',[ApplicationController::class,'approvedapplications
 Route::get('/admin/scholarship',[ApplicationController::class,'scholarshipapplications'])->middleware('admin')->name('scholarshipapplications');
 Route::get('/admin/course',[ApplicationController::class,'courseapplications'])->middleware('admin')->name('courseapplications');
 Route::get('/admin',[ApplicationController::class,'admindashboard'])->middleware('admin')->name('admin');
+
+
 Route::get('/admin/subject',[ApplicationController::class,'addsubjectview'])->middleware('admin')->name('addsubjectview');
 Route::post('/admin/subject',[ApplicationController::class,'addsubject'])->middleware('admin')->name('addsubject');
 Route::get('/admin/subject/delete/{id}', [ApplicationController::class, 'deletesubject'])->middleware('admin')->name('deletesubject');

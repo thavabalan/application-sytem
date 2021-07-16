@@ -786,7 +786,7 @@
                         <!--begin::Heading-->
                         <div class="mb-13 text-center">
                             <!--begin::Title-->
-                            <h1 class="mb-3">Accept the Application</h1>
+                            <h1 class="mb-3">Upload admission offer letter</h1>
                             <!--end::Title-->
                             <!--begin::Description-->
                             <form action="{{route('admin.applications.approve',$application->id)}}" method="post" enctype="multipart/form-data">
@@ -807,7 +807,7 @@
                         <div class="d-flex align-items-center mt-10">
                             <!--begin::Label-->
                             <div class="flex-grow-1">
-                                <button type="submit"  class="btn btn-sm btn-success me-3">Accept</button>
+                                <button type="submit"  class="btn btn-sm btn-success me-3">Submit Letter</button>
                             </div>
                         </form>
                             <!--end::Label-->

@@ -27,7 +27,7 @@
                         <tbody>
                             @foreach ($applications as $item)
                             <tr>
-                                <td>MUTEMP{{$item->user->id}}-{{$item->id}}</td>
+                                <td>MIUTEMP{{$item->user->id}}-{{$item->id}}</td>
                                 <td>{{$item->user->firstname}}</td>
                                 <td>{{$item->user->mobilenumber}}</td>
                                 <td>{{$item->scholarship->title}}</td>

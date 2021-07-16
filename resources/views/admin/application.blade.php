@@ -32,7 +32,7 @@
                     @foreach ($applications as $item)
                     <tr> 
                         <td>{{$item->created_at}}</td>
-                        <td>MUTEMP{{$item->user->id}}-{{$item->id}}</td>
+                        <td>MIUTEMP{{$item->user->id}}-{{$item->id}}</td>
                         <td>{{$item->user->firstname}}</td>
                         <td>{{$item->scholarship->title}}</td>
                         <td>{{$item->course->title}}</td>

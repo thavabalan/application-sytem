@@ -23,8 +23,10 @@ class ApplicationController extends Controller
 {
     public function index(){
         $notifications = Notification::where('user_id',Auth::id())->get();
-
-        return view('student.index',['notifications'=>  $notifications]);
+        $application_count = Application::where('user_id',Auth::id())->count();
+        $rejected_count = Application::where('status','=','Rejected')->where('user_id','=',Auth::id())->count();
+        $approved_count = Application::where('status','Approved')->where('user_id','=',Auth::id())->count();
+        return view('student.index',['notifications'=> $notifications,'application_count'=>$application_count, 'approved_count'=>$approved_count,'rejected_count'=>$rejected_count]);
     }
 
     public function scholarship(){
@@ -182,6 +184,8 @@ class ApplicationController extends Controller
         $male_count =  User::where('gender','Male')->count();
         return view('admin.index',['application_count' => $application_count,'approved_count' => $approved_count,'pending_count' => $pending_count,'female_count' => $female_count,'male_count'=>$male_count ]);
     }
+
+ 
 
     public function  offerletter(){
 
